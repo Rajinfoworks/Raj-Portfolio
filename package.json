@@ -1,0 +1,21 @@
+{
+  "name": "raj-site",
+  "version": "1.0.0",
+  "main": "server.js",
+  "description": "Portfolio site with contact form using Node.js, Express, and Nodemailer",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["portfolio", "express", "node", "nodemailer"],
+  "author": "Raj Sharma",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.8"
+  }
+}

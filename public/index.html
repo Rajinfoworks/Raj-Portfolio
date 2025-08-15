@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Raj Sharma — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="color-scheme" content="dark light">
+</head>
+
+<body>
+    <!-- ===== Header / Navbar ===== -->
+    <header class="header">
+        <div class="container nav">
+            <a class="brand" href="#home" aria-label="Raj Sharma Home">
+                <span class="brand-mark">RS</span><span class="brand-text">Raj Sharma</span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav class="nav-links" aria-label="Primary">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#work">Work</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☾</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section id="home" class="hero section">
+        <div class="container hero-inner">
+            <div class="badge">Available for new projects</div>
+            <h1 class="headline">
+                Designing & building digital products that feel
+                <span class="gradient-text">delightfully simple</span>.
+            </h1>
+            <p class="subhead">
+                I’m Raj Sharma — a product designer & full-stack developer crafting thoughtful
+                experiences for web and mobile. I turn complex ideas into elegant, usable software.
+            </p>
+            <div class="cta-group">
+                <a href="#work" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-ghost">Let’s Talk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Services</h2>
+                <p class="section-desc">End-to-end support — from strategy and design to pixel-perfect builds.</p>
+            </div>
+
+            <div class="grid cards-3">
+                <article class="card reveal">
+                    <div class="card-icon">🎯</div>
+                    <h3>Product Strategy</h3>
+                    <p>Discovery, scoping, user flows, and roadmaps that align with real user needs.</p>
+                    <ul class="bullets">
+                        <li>Research & user interviews</li>
+                        <li>Information architecture</li>
+                        <li>Journey mapping</li>
+                    </ul>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-icon">🎨</div>
+                    <h3>UX/UI Design</h3>
+                    <p>Accessible, on-brand interfaces with design systems that scale.</p>
+                    <ul class="bullets">
+                        <li>Wireframes to hi-fi</li>
+                        <li>Design systems</li>
+                        <li>Prototyping & testing</li>
+                    </ul>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Full-Stack Dev</h3>
+                    <p>Robust frontends & performant backends with modern tooling.</p>
+                    <ul class="bullets">
+                        <li>React / Next.js, Node</li>
+                        <li>REST/GraphQL APIs</li>
+                        <li>Deployment & CI/CD</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Selected Work ===== -->
+    <section id="work" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Selected Work</h2>
+                <p class="section-desc">A few projects that showcase my approach and craft.</p>
+            </div>
+
+            <div class="grid projects">
+                <article class="project reveal">
+                    <a href="#" class="project-card">
+                        <div class="project-thumb gradient-border">
+                            <div class="thumb-skeleton">BeServer — SaaS Dashboard</div>
+                        </div>
+                        <div class="project-meta">
+                            <h3>BeServer</h3>
+                            <p>Operational analytics dashboard with real-time charts, roles & permissions.</p>
+                            <span class="pill">SaaS</span>
+                            <span class="pill">React</span>
+                            <span class="pill">Node</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project reveal">
+                    <a href="#" class="project-card">
+                        <div class="project-thumb gradient-border">
+                            <div class="thumb-skeleton">Energetic Tumblr — Creator Tools</div>
+                        </div>
+                        <div class="project-meta">
+                            <h3>Energetic Tumblr</h3>
+                            <p>Content creation suite with theming engine and publishing pipeline.</p>
+                            <span class="pill">Creator</span>
+                            <span class="pill">Design System</span>
+                            <span class="pill">Next.js</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project reveal">
+                    <a href="#" class="project-card">
+                        <div class="project-thumb gradient-border">
+                            <div class="thumb-skeleton">Creative Portfolio — Personal Site</div>
+                        </div>
+                        <div class="project-meta">
+                            <h3>Creative Portfolio</h3>
+                            <p>Ultra-fast portfolio with MDX content and semantic, accessible UI.</p>
+                            <span class="pill">Jamstack</span>
+                            <span class="pill">Accessibility</span>
+                            <span class="pill">Performance</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-desc">Depth where it counts, breadth where it helps.</p>
+            </div>
+
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-top">
+                        <span>UI/UX Design</span>
+                        <span class="skill-val">90%</span>
+                    </div>
+                    <div class="skill-bar"><span class="skill-fill" style="--target:90%"></span></div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-top">
+                        <span>Frontend Development</span>
+                        <span class="skill-val">85%</span>
+                    </div>
+                    <div class="skill-bar"><span class="skill-fill" style="--target:85%"></span></div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-top">
+                        <span>Backend Development</span>
+                        <span class="skill-val">80%</span>
+                    </div>
+                    <div class="skill-bar"><span class="skill-fill" style="--target:80%"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Let’s build something great</h2>
+                <p class="section-desc">Tell me about your project. I’ll reply within 24 hours.</p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact grid" action="/send-mail" method="POST" novalidate>
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required />
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+                </div>
+                <div class="field span-2">
+                    <label for="message">Project brief</label>
+                    <textarea id="message" name="message" rows="5" placeholder="What are we building?"
+                        required></textarea>
+                </div>
+                <div class="field span-2">
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Raj Sharma. All rights reserved.</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/raj-sharma-4a9893268" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin_icon.png" class="social-icon">
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rajinfoworks@gmail.com" target="_blank"
+                    aria-label="Email">
+                    <img src="images/mailbox_icon.png" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/rajinfoworks/?__pwa=1" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram_icon.png" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

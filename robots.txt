@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raj-portfolio-nuu4.onrender.com/sitemap.xml

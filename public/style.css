@@ -432,6 +432,34 @@ body {
   opacity: 1;
 }
 
+#clients .card img {
+  max-width: 150px;
+  /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+#clients .card:hover img {
+  transform: scale(1.1);
+  /* Slight zoom on hover */
+}
+
+@media (max-width: 768px) {
+  .grid.cards-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid.cards-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .testimonials {
   display: grid;
   gap: 24px;
@@ -963,11 +991,17 @@ body[data-theme="dark"] .greeting .name-highlight {
 }
 
 @keyframes scroll-left {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* move half (because duplicated) */
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+  /* move half (because duplicated) */
 }
 
 .skills-marquee:hover .skills-track {
   animation-play-state: paused;
 }
-

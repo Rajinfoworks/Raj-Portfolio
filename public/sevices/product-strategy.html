@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>🎯 Ultimate Product Strategy | Rajinfoworks</title>
+  <meta name="description" content="Master your product journey with Rajinfoworks: market research, strategic roadmaps, prototyping, validation, and execution to ensure product success.">
+  <meta name="keywords" content="Product Strategy, Rajinfoworks, Market Research, Roadmap, Prototyping, Validation, UX Strategy, Feature Prioritization, Startup Growth">
+  <meta name="author" content="Raj Sharma">
+  <meta name="robots" content="index, follow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<!-- Styles -->
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* ================= THEME VARIABLES ================= */
+    [data-theme="dark"] {
+      --bg:#0b0c10; --bg-elev:#111218; --text:#e6e6e6; --muted:#a8a8a8;
+      --brand:#f9b234; --brand-2:#ff6a00; --accent:#7c5cff; --card:#141620;
+      --border:rgba(255,255,255,0.08); --shadow:0 10px 30px rgba(0,0,0,0.35); --radius:14px;
+      --gradient1:#0d0e14; --gradient2:#12141c; --gradient3:#161723;
+      --btn-bg:linear-gradient(135deg,var(--brand),var(--brand-2)); --btn-text:#0b0c10;
+      --particle-color:rgba(249,178,52,0.25); --glow-color:rgba(249,178,52,0.4);
+    }
+    [data-theme="light"] {
+      --bg:#fafafa; --bg-elev:#ffffff; --text:#1a1a1a; --muted:#5a5a5a;
+      --brand:#f9b234; --brand-2:#ff6a00; --accent:#7c5cff; --card:#ffffff;
+      --border:rgba(0,0,0,0.08); --shadow:0 10px 30px rgba(0,0,0,0.15); --radius:14px;
+      --gradient1:#f5f5f5; --gradient2:#fffaf3; --gradient3:#fff4e5;
+      --btn-bg:linear-gradient(135deg,var(--brand),var(--brand-2)); --btn-text:#ffffff;
+      --particle-color:rgba(249,178,52,0.15); --glow-color:rgba(249,178,52,0.25);
+    }
+
+    /* ================= RESET & BASE ================= */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;overflow-x:hidden;}
+    a{color:var(--brand);text-decoration:none;transition:0.3s;}
+    a:hover{color:var(--accent);}
+    .container{max-width:1200px;margin:0 auto;padding:80px 20px;position:relative;z-index:2;}
+
+    /* ================= BACKGROUND ================= */
+    #product-strategy-page::before{
+      content:"";position:fixed;inset:0;
+      background:linear-gradient(135deg,var(--gradient1),var(--gradient2),var(--gradient3));
+      background-size:600% 600%;filter:blur(100px);animation:bgMove 60s ease infinite;z-index:0;
+    }
+    @keyframes bgMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+    /* ================= PARTICLES ================= */
+    .particle{
+      position:absolute;border-radius:50%;background:var(--particle-color);
+      pointer-events:none;animation:floatParticle linear infinite;filter:blur(2px);
+    }
+    @keyframes floatParticle{0%{transform:translateY(0) scale(0.8);opacity:0.6}50%{transform:translateY(-600px) scale(1.1);opacity:0.3}100%{transform:translateY(-1200px) scale(0.8);opacity:0.6}}
+
+    /* ================= GLOW EFFECT ================= */
+    .glow-effect{
+      position:absolute;width:160px;height:160px;border-radius:50%;
+      pointer-events:none;background:radial-gradient(circle,var(--glow-color),transparent);
+      transform:translate(-50%,-50%);z-index:0;filter:blur(12px);
+    }
+
+    /* ================= TITLES & SECTIONS ================= */
+    .section-title{font-size:3rem;text-align:center;background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:30px;}
+    .section-desc{text-align:center;color:var(--muted);margin-bottom:70px;font-size:1.15rem;}
+    .sub-title{font-size:2rem;margin:60px 0 30px;color:var(--brand);position:relative;}
+    .sub-title::after{content:'';display:block;width:60px;height:4px;background:var(--accent);margin-top:8px;border-radius:2px;transition:width 0.3s ease;}
+    .sub-title:hover::after{width:120px;}
+
+    /* ================= LISTS ================= */
+    .strength-list,.steps-list{list-style:none;padding-left:0;margin-bottom:35px;}
+    .strength-list li::before{content:"✔️ ";margin-right:8px;color:var(--brand);}
+    .steps-list li::before{content:"🚀 ";margin-right:8px;color:var(--accent);}
+    .strength-list li,.steps-list li{margin-bottom:16px;transition:transform 0.3s ease;}
+    .strength-list li:hover,.steps-list li:hover{transform:translateX(6px);}
+
+    /* ================= SERVICE CARDS ================= */
+    .service-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:50px;}
+    .service-card{background:var(--card);border-radius:var(--radius);padding:32px;border:1px solid var(--border);box-shadow:var(--shadow);position:relative;transition:transform 0.4s ease,box-shadow 0.4s ease;}
+    .service-card h3{margin-bottom:14px;color:var(--brand);font-size:1.35rem;}
+    .service-card p{color:var(--text);font-size:0.95rem;}
+    .service-card:hover{transform:translateY(-10px) scale(1.04);box-shadow:0 18px 50px rgba(255,180,0,0.45),0 0 16px rgba(124,92,255,0.3);}
+    .service-card:hover h3,.service-card:hover p{color:var(--accent);}
+
+    /* ================= BUTTONS ================= */
+    .btn{display:inline-block;padding:16px 38px;border-radius:var(--radius);font-weight:600;font-size:1rem;cursor:pointer;border:none;transition:all 0.35s ease;}
+    .btn-primary{background:var(--btn-bg);color:var(--btn-text);box-shadow:var(--shadow);}
+    .btn-primary:hover{transform:translateY(-4px) scale(1.06);background-position:100% 0;}
+
+    /* ================= REVEAL ================= */
+    .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
+    .reveal.active{opacity:1;transform:translateY(0);}
+
+    /* ================= THEME TOGGLE ================= */
+    .theme-toggle-btn{position:fixed;top:20px;right:20px;z-index:999;background:var(--btn-bg);color:var(--btn-text);border:none;padding:12px 16px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.15);transition:transform 0.4s ease, background 0.4s ease,color 0.4s ease;}
+    .theme-toggle-btn .icon{transition:transform 0.6s ease,color 0.4s ease;}
+    .theme-toggle-btn.toggle .icon{transform:rotate(360deg);}
+
+    /* ================= BACK TO HOME ================= */
+    .back-to-home{position:fixed;bottom:30px;left:30px;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:1.2rem;color:var(--brand);text-decoration:none;z-index:9999;cursor:pointer;text-shadow:0 2px 8px rgba(0,0,0,0.5);transition:color 0.3s ease,transform 0.3s ease;}
+    .back-to-home .arrow{display:inline-block;animation:bounceArrow 1.2s ease-in-out infinite;}
+    .back-to-home .text{transition:transform 0.3s ease,color 0.3s ease;}
+    .back-to-home:hover .arrow{transform:translateX(-6px) rotate(-15deg);}
+    .back-to-home:hover .text{color:var(--accent);transform:translateX(-4px);}
+    @keyframes bounceArrow{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width:768px){.section-title{font-size:2.4rem;}.sub-title{font-size:1.6rem;}.service-card{padding:24px;}}
+  </style>
+</head>
+<body>
+
+  <!-- THEME TOGGLE -->
+  <button id="themeToggleBtn" class="theme-toggle-btn"><span class="icon">☾</span></button>
+
+  <div id="product-strategy-page">
+    <main class="section container">
+      <div class="section-head reveal">
+        <h1 class="section-title">Ultimate Product Strategy</h1>
+        <p class="section-desc">From ideation to execution — research, planning, prototyping, validation, and growth strategies. <span>🚀</span></p>
+      </div>
+
+      <p class="reveal">At <span class="brand-custom">Raj<span class="i-red">i</span>nfoworks</span>, we partner with startups and enterprises to design winning product strategies that combine market insights, design thinking, and data-driven decision-making. 💡</p>
+
+      <h2 class="sub-title reveal">Why Product Strategy Matters 📊</h2>
+      <ul class="strength-list reveal">
+        <li>Validate early to avoid costly mistakes ⚡</li>
+        <li>Align product direction with real user needs 🎯</li>
+        <li>Strategic roadmap for faster, focused execution 🛠️</li>
+        <li>Boost adoption, engagement & retention 📈</li>
+        <li>Outperform competitors with deep insights 🔍</li>
+      </ul>
+
+      <h2 class="sub-title reveal">Our Strategy Services ✨</h2>
+      <div class="service-cards reveal">
+        <a href="market-research.html" class="service-card">
+          <h3>🔎 Market & User Research</h3>
+          <p>In-depth market research, competitor analysis, and user studies.</p>
+        </a>
+        <a href="roadmap-prioritization.html" class="service-card">
+          <h3>🗺️ Roadmap & Feature Prioritization</h3>
+          <p>Craft roadmaps balancing user value and business impact.</p>
+        </a>
+        <a href="prototyping-wireframes.html" class="service-card">
+          <h3>🖌️ Prototyping & Wireframes</h3>
+          <p>Transform ideas into interactive prototypes before coding.</p>
+        </a>
+        <a href="validation-testing.html" class="service-card">
+          <h3>✅ Validation & Testing</h3>
+          <p>Run usability tests, A/B experiments, and iteration cycles.</p>
+        </a>
+      </div>
+
+      <h2 class="sub-title reveal">Our Complete Strategy Process 🔄</h2>
+      <ol class="steps-list reveal">
+        <li><strong>Discovery:</strong> Define goals, users, and market fit 🔍</li>
+        <li><strong>Research:</strong> Competitor, trend & UX insights 📊</li>
+        <li><strong>Ideation:</strong> Brainstorm features & concepts 💡</li>
+        <li><strong>Prototyping:</strong> Interactive wireframes & flows 🖌️</li>
+        <li><strong>Validation:</strong> User testing & product feedback ✅</li>
+        <li><strong>Execution:</strong> Roadmap, launch plan & growth 🚀</li>
+      </ol>
+
+      <div class="cta-group reveal">
+        <a href="/#contact" class="btn btn-primary">📩 Start Your Product Journey</a>
+      </div>
+    </main>
+
+    <!-- BACK TO SERVICES LINK -->
+    <a href="../index.html#services" class="back-to-home">
+      <span class="arrow">⮜</span>
+      <span class="text">Back to Services</span>
+    </a>
+  </div>
+
+  <script>
+    (() => {
+      const page = document.getElementById('product-strategy-page');
+      const themeBtn = document.getElementById('themeToggleBtn');
+      const icon = themeBtn.querySelector('.icon');
+
+      // Theme toggle
+      const applyTheme = theme => { document.documentElement.setAttribute('data-theme', theme); icon.textContent = theme==='dark'?'☀':'☾'; };
+      themeBtn.addEventListener('click',()=>{applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');});
+
+      // Reveal on scroll
+      const revealEls=[...page.querySelectorAll('.reveal')];
+      const revealOnScroll=()=>{const h=window.innerHeight;revealEls.forEach(el=>el.classList.toggle('active',el.getBoundingClientRect().top<h-100));};
+      window.addEventListener('scroll',revealOnScroll);window.addEventListener('load',revealOnScroll);
+
+      // Particles
+      for(let i=0;i<35;i++){
+        const p=document.createElement('div');p.className='particle';
+        const s=6+Math.random()*14;
+        Object.assign(p.style,{width:s+'px',height:s+'px',left:Math.random()*window.innerWidth+'px',top:Math.random()*window.innerHeight+'px',animationDuration:(15+Math.random()*20)+'s',opacity:0.6+Math.random()*0.4});
+        page.appendChild(p);
+      }
+
+      // Service card glow
+      const colors=['rgba(255,180,0,0.4)','rgba(124,92,255,0.4)','rgba(255,106,0,0.4)','rgba(0,255,180,0.4)'];
+      page.querySelectorAll('.service-card').forEach((card,i)=>{
+        card.addEventListener('mousemove',e=>{
+          let g=card.querySelector('.glow-effect');
+          if(!g){g=document.createElement('span');g.className='glow-effect';g.style.background=`radial-gradient(circle, ${colors[i]}, rgba(0,0,0,0))`;card.appendChild(g);}
+          const r=card.getBoundingClientRect(); g.style.left=(e.clientX-r.left)+'px'; g.style.top=(e.clientY-r.top)+'px';
+        });
+        card.addEventListener('mouseleave',()=>{const g=card.querySelector('.glow-effect');if(g) g.remove();});
+      });
+    })();
+  </script>
+  <script src="../script.js" defer></script>
+</body>
+</html>

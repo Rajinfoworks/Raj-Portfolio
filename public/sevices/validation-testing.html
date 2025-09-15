@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✅ Validation & Testing | Rajinfoworks</title>
+  <meta name="description" content="Validation & Testing services by Rajinfoworks. Ensure usability, quality, performance, and accessibility through structured product testing.">
+  <meta name="keywords" content="Validation, Testing, QA, Usability Testing, A/B Testing, Rajinfoworks, Accessibility, Security Testing, UX Validation">
+  <meta name="author" content="Raj Sharma">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* ==== THEME ==== */
+    [data-theme="dark"] {
+      --bg:#0b0c10; --text:#e6e6e6; --muted:#a8a8a8;
+      --brand:#00c896; --brand-2:#48a9ec; --accent:#fff;
+      --card:#141620; --border:rgba(255,255,255,0.1);
+      --glow:rgba(0,200,150,0.6);
+    }
+    [data-theme="light"] {
+      --bg:#fdfdfd; --text:#1a1a1a; --muted:#555;
+      --brand:#00c896; --brand-2:#48a9ec; --accent:#000;
+      --card:#fff; --border:rgba(0,0,0,0.08);
+      --glow:rgba(0,200,150,0.4);
+    }
+
+    body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden;text-align:center;}
+    h1{font-size:3rem;margin:40px 0;}
+    h2{margin:60px 0 20px;color:var(--brand);}
+    p,li{color:var(--muted);font-size:1.1rem;}
+    ul{margin:0 auto 30px auto;max-width:900px;text-align:left;}
+
+    /* ==== TESTING DEMO ==== */
+    .testing-demo {
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;margin:60px auto;max-width:1100px;padding:20px;
+    }
+    .test-block {
+      background:var(--card);border:2px solid var(--border);
+      border-radius:12px;padding:25px;min-height:200px;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;
+      transition:transform 0.4s ease,box-shadow 0.4s ease;
+    }
+    .test-block:hover {
+      transform:translateY(-8px);box-shadow:0 0 25px var(--glow);
+    }
+    .test-icon {
+      font-size:2.2rem;margin-bottom:12px;animation:bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}
+    }
+
+    /* ==== REVEAL ==== */
+    .reveal{opacity:0;transform:translateY(40px);transition:all 1s ease;}
+    .reveal.active{opacity:1;transform:translateY(0);}
+
+    /* ==== PARTICLES ==== */
+    .particle { position:absolute;border-radius:50%;background:var(--brand-2);pointer-events:none;opacity:0.15;filter:blur(2px);animation:float 25s linear infinite;}
+    @keyframes float {from{transform:translateY(0);}to{transform:translateY(-1500px);} }
+
+    /* ==== THEME TOGGLE ==== */
+    .theme-toggle-btn {
+      position:fixed;top:20px;right:20px;background:var(--brand);
+      color:#fff;border:none;padding:12px;border-radius:50%;
+      cursor:pointer;z-index:10;font-size:1.2rem;
+    }
+
+    /* ==== BACK LINK ==== */
+    .back-to-home{
+      position:fixed; bottom:30px; left:30px; display:flex; align-items:center;
+      gap:8px; font-weight:600; font-size:1.2rem; color:var(--brand);
+      text-decoration:none; z-index:9999; cursor:pointer;
+      text-shadow:0 2px 8px rgba(0,0,0,0.5); transition:all 0.3s ease;
+    }
+    .back-to-home:hover{color:var(--accent); transform:translateX(-6px);}
+  </style>
+</head>
+<body>
+  <!-- THEME TOGGLE -->
+  <button id="themeToggleBtn" class="theme-toggle-btn">☾</button>
+
+  <h1 class="reveal">✅ Validation & Testing</h1>
+  <p class="reveal" style="max-width:900px;margin:0 auto;">
+    <strong>Validation & Testing</strong> ensures your product is <strong>usable, secure, accessible, and high-performing</strong>.  
+    At <strong>Rajinfoworks</strong>, we run structured test strategies that eliminate bugs, validate assumptions, and give you confidence before launch.  
+  </p>
+
+  <h2 class="reveal">Why It Matters 🎯</h2>
+  <ul class="reveal">
+    <li>🔍 Catch usability issues before your users do.</li>
+    <li>⚡ Ensure performance and stability under real conditions.</li>
+    <li>♿ Build inclusive products through accessibility testing.</li>
+    <li>🔒 Protect customer trust with secure systems.</li>
+    <li>📈 Validate business decisions with measurable experiments.</li>
+  </ul>
+
+  <h2 class="reveal">Testing Types 🔬</h2>
+  <div class="testing-demo reveal">
+    <div class="test-block"><span class="test-icon">👥</span><p>Usability Testing</p></div>
+    <div class="test-block"><span class="test-icon">🅰️</span><p>A/B Split Testing</p></div>
+    <div class="test-block"><span class="test-icon">⚡</span><p>Performance & Load</p></div>
+    <div class="test-block"><span class="test-icon">♿</span><p>Accessibility</p></div>
+    <div class="test-block"><span class="test-icon">🛡️</span><p>Security Testing</p></div>
+    <div class="test-block"><span class="test-icon">✅</span><p>Regression Testing</p></div>
+  </div>
+
+  <h2 class="reveal">Our Process 🚀</h2>
+  <ul class="reveal">
+    <li>📋 Define test objectives aligned with strategy.</li>
+    <li>👥 Run real user sessions for usability validation.</li>
+    <li>🧪 Simulate real-world edge cases and environments.</li>
+    <li>📊 Collect measurable data and feedback.</li>
+    <li>🔄 Iterate quickly to fix issues before full rollout.</li>
+  </ul>
+
+  <h2 class="reveal">Examples in Action 📊</h2>
+  <p class="reveal" style="max-width:900px;margin:0 auto;">
+    Imagine launching a new checkout flow:  
+    - With <strong>A/B testing</strong>, we compare two versions to see which improves conversions.  
+    - With <strong>accessibility testing</strong>, we ensure screen-reader compatibility for all users.  
+    - With <strong>performance testing</strong>, we verify that the system holds up on Black Friday.  
+  </p>
+
+  <h2 class="reveal">Benefits 🌟</h2>
+  <ul class="reveal">
+    <li>💸 Save costs by catching bugs early.</li>
+    <li>🚀 Launch with confidence and fewer surprises.</li>
+    <li>📈 Improve conversions and usability.</li>
+    <li>🤝 Deliver products users can rely on and love.</li>
+  </ul>
+
+  <h2 class="reveal">Get Started ✅</h2>
+  <p class="reveal" style="max-width:900px;margin:0 auto;">
+    Testing is not an afterthought — it’s a <strong>core part of product design</strong>.  
+    With <strong>Rajinfoworks</strong>, you gain a trusted partner who validates every step, mitigates risks, and guarantees user satisfaction.  
+  </p>
+
+  <!-- BACK LINK -->
+  <a href="../sevices/product-strategy.html" class="back-to-home">
+    <span class="arrow">⮜</span>
+    <span class="text">Back to Services</span>
+  </a>
+
+  <script>
+    // Theme toggle
+    const themeBtn=document.getElementById("themeToggleBtn");
+    themeBtn.addEventListener("click",()=>{
+      const cur=document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme",cur==="dark"?"light":"dark");
+      themeBtn.textContent=cur==="dark"?"☾":"☀";
+    });
+
+    // Reveal on scroll
+    const revealEls=document.querySelectorAll(".reveal");
+    const onScroll=()=>{
+      revealEls.forEach(el=>{
+        if(el.getBoundingClientRect().top<window.innerHeight-100) el.classList.add("active");
+      });
+    };
+    window.addEventListener("scroll",onScroll);window.addEventListener("load",onScroll);
+
+    // Particles
+    for(let i=0;i<25;i++){
+      const p=document.createElement("div");
+      p.className="particle";
+      const s=6+Math.random()*12;
+      Object.assign(p.style,{
+        width:s+"px",height:s+"px",left:Math.random()*window.innerWidth+"px",
+        top:Math.random()*window.innerHeight+"px",animationDuration:(20+Math.random()*20)+"s"
+      });
+      document.body.appendChild(p);
+    }
+  </script>
+  <script src="../script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔎 Market & User Research | Rajinfoworks</title>
+  <meta name="description" content="Comprehensive guide to Market & User Research by Rajinfoworks. Learn methods, tools, benefits, and process to understand your audience and make informed product decisions.">
+  <meta name="keywords" content="Market Research, User Research, Competitor Analysis, Surveys, UX Research, Rajinfoworks">
+  <meta name="author" content="Raj Sharma">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* ================= THEME VARIABLES ================= */
+    [data-theme="dark"] {
+      --bg:#0b0c10;--bg-elev:#111218;--text:#e6e6e6;--muted:#a8a8a8;
+      --brand:#f9b234;--brand-2:#ff6a00;--accent:#ffffff;--card:#141620;
+      --border:rgba(255,255,255,0.08);--shadow:0 10px 30px rgba(0,0,0,0.35);--radius:14px;
+      --gradient1:#0d0e14;--gradient2:#12141c;--gradient3:#161723;
+      --btn-bg:linear-gradient(135deg,var(--brand),var(--brand-2));--btn-text:#0b0c10;
+      --particle-color:rgba(249,178,52,0.25);--glow-color:rgba(249,178,52,0.4);
+    }
+    [data-theme="light"] {
+      --bg:#fafafa;--bg-elev:#ffffff;--text:#1a1a1a;--muted:#5a5a5a;
+      --brand:#f9b234;--brand-2:#ff6a00;--accent:#000000;--card:#ffffff;
+      --border:rgba(0,0,0,0.08);--shadow:0 10px 30px rgba(0,0,0,0.15);--radius:14px;
+      --gradient1:#f5f5f5;--gradient2:#fffaf3;--gradient3:#fff4e5;
+      --btn-bg:linear-gradient(135deg,var(--brand),var(--brand-2));--btn-text:#ffffff;
+      --particle-color:rgba(249,178,52,0.15);--glow-color:rgba(249,178,52,0.25);
+    }
+
+    /* ================= BASE ================= */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden;}
+    h1,h2,h3,h4,p,li,span,strong,a{color:var(--text);}
+    a{color:var(--brand);transition:0.3s;}
+    a:hover{color:var(--accent);}
+    .highlight{color:var(--accent);font-weight:600;}
+    .container{max-width:1200px;margin:0 auto;padding:80px 20px;position:relative;z-index:2;}
+
+    h1{font-size:3rem;text-align:center;margin-bottom:30px;}
+    h2{font-size:2rem;text-align:center;margin-top:60px;color:var(--brand);}
+    h3{font-size:1.4rem;margin-top:40px;}
+    p{margin-bottom:18px;}
+    ul{margin-left:20px;margin-bottom:30px;}
+    li{margin-bottom:12px;}
+    .emoji{font-size:1.3rem;margin-right:8px;}
+
+    /* ================= BACK LINK ================= */
+    .back-to-home{
+      position:fixed; bottom:30px; left:30px; display:inline-flex; align-items:center; gap:8px;
+      font-weight:600; font-size:1.2rem; color:var(--brand); text-decoration:none; z-index:9999;
+      text-shadow:0 2px 8px rgba(0,0,0,0.5); transition:0.3s;
+    }
+    .back-to-home .arrow{display:inline-block;animation:bounceArrow 1.2s ease-in-out infinite;}
+    .back-to-home:hover{color:var(--accent); transform:translateX(-4px);}
+    @keyframes bounceArrow{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+
+    /* ================= THEME TOGGLE ================= */
+    .theme-toggle-btn{
+      position:fixed; top:20px; right:20px; z-index:999;
+      background:var(--btn-bg); color:var(--btn-text); border:none; padding:12px 16px;
+      border-radius:50%; cursor:pointer; font-size:1.4rem; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 6px 20px rgba(0,0,0,0.15); transition:0.4s;
+    }
+    .theme-toggle-btn.toggle .icon{transform:rotate(360deg);transition:transform 0.6s ease;}
+
+    /* ================= BACKGROUND ================= */
+    #market-research-page::before{
+      content:"";position:fixed;inset:0;
+      background:linear-gradient(135deg,var(--gradient1),var(--gradient2),var(--gradient3));
+      background-size:600% 600%;filter:blur(100px);animation:bgMove 60s ease infinite;z-index:0;
+    }
+    @keyframes bgMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .particle{position:absolute;border-radius:50%;background:var(--particle-color);animation:float linear infinite;}
+    @keyframes float{0%{transform:translateY(0)}100%{transform:translateY(-1200px)}}
+
+    /* ================= REVEAL ================= */
+    .reveal{opacity:0;transform:translateY(30px);transition:0.8s ease;}
+    .reveal.active{opacity:1;transform:translateY(0);}
+
+    /* ================= ROADMAP VISUAL ================= */
+    .roadmap-flow{margin:60px auto;max-width:1000px;position:relative;}
+    .roadmap-flow ul{list-style:none;padding:0;display:flex;justify-content:space-between;position:relative;}
+    .roadmap-flow ul::before{
+      content:"";position:absolute;top:50%;left:0;width:100%;height:4px;
+      background:var(--border);z-index:0;
+    }
+    .roadmap-flow li{
+      position:relative;z-index:1;flex:1;text-align:center;
+    }
+    .roadmap-flow .circle{
+      width:40px;height:40px;background:var(--btn-bg);border-radius:50%;margin:0 auto 10px;
+      display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--btn-text);
+      box-shadow:0 0 20px var(--glow-color);
+      animation:pulse 3s infinite ease-in-out;
+    }
+    .roadmap-flow p{font-size:0.9rem;}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+  </style>
+</head>
+<body>
+
+  <!-- THEME TOGGLE -->
+  <button id="themeToggleBtn" class="theme-toggle-btn"><span class="icon">☾</span></button>
+
+  <div id="market-research-page">
+    <div class="container">
+      <h1 class="reveal">🔎 Market & User Research</h1>
+      <p class="reveal">Market & User Research is the backbone of successful product development. At <span class="highlight">Rajinfoworks</span>, we believe research bridges the gap between ideas and user needs, ensuring strategies are data-driven and effective. 📊</p>
+
+      <h2 class="reveal">Why It Matters 📈</h2>
+      <ul class="reveal">
+        <li><span class="emoji">👥</span> Understand target audiences deeply through personas.</li>
+        <li><span class="emoji">🔍</span> Identify trends, opportunities, and competitor strategies.</li>
+        <li><span class="emoji">⚡</span> Reduce risks by validating assumptions early.</li>
+        <li><span class="emoji">💡</span> Provide insights that fuel product strategy.</li>
+        <li><span class="emoji">🏆</span> Gain a strong competitive advantage.</li>
+      </ul>
+
+      <h2 class="reveal">Research Methods 🛠️</h2>
+      <p class="reveal">We combine <strong>quantitative</strong> and <strong>qualitative</strong> approaches for complete insights:</p>
+      <ul class="reveal">
+        <li><span class="emoji">📊</span> Quantitative: Surveys, analytics, performance metrics.</li>
+        <li><span class="emoji">📝</span> Qualitative: Interviews, focus groups, usability testing.</li>
+        <li><span class="emoji">🔍</span> Competitor Analysis: Benchmarking against market leaders.</li>
+        <li><span class="emoji">💡</span> Opportunity Mapping: Spot unmet needs and gaps.</li>
+      </ul>
+
+      <h2 class="reveal">Research Process 🔄</h2>
+      <div class="roadmap-flow reveal">
+        <ul>
+          <li><div class="circle">1</div><p>Define Objectives</p></li>
+          <li><div class="circle">2</div><p>Collect Data</p></li>
+          <li><div class="circle">3</div><p>Analyze Insights</p></li>
+          <li><div class="circle">4</div><p>Report Findings</p></li>
+          <li><div class="circle">5</div><p>Apply to Strategy</p></li>
+        </ul>
+      </div>
+
+      <h2 class="reveal">Benefits 🌟</h2>
+      <ul class="reveal">
+        <li><span class="emoji">🎯</span> Strong product-market fit.</li>
+        <li><span class="emoji">🔄</span> Better engagement & retention.</li>
+        <li><span class="emoji">⚡</span> Lower risks and improved ROI.</li>
+      </ul>
+
+      <h2 class="reveal">Challenges 🚧</h2>
+      <p class="reveal">While research is critical, it comes with challenges such as:</p>
+      <ul class="reveal">
+        <li><span class="emoji">⏳</span> Time-consuming processes.</li>
+        <li><span class="emoji">💰</span> Budget limitations for extensive studies.</li>
+        <li><span class="emoji">📉</span> Risk of bias or inaccurate data.</li>
+        <li><span class="emoji">⚠</span> Difficulty turning raw data into actionable insights.</li>
+      </ul>
+
+      <h2 class="reveal">Best Practices ✅</h2>
+      <ul class="reveal">
+        <li><span class="emoji">📌</span> Always define clear research goals.</li>
+        <li><span class="emoji">👂</span> Listen to users beyond surface-level answers.</li>
+        <li><span class="emoji">🛠️</span> Use the right tools for your research method.</li>
+        <li><span class="emoji">📊</span> Combine qualitative and quantitative data.</li>
+        <li><span class="emoji">📅</span> Conduct research regularly, not just once.</li>
+      </ul>
+    </div>
+
+    <div class="cta-group reveal">
+        <a href="/#contact" class="btn btn-primary">📩 Start Your Product Journey</a>
+      </div>
+
+    <!-- BACK LINK -->
+    <a href="../sevices/product-strategy.html" class="back-to-home">
+      <span class="arrow">⮜</span> Back to Services
+    </a>
+  </div>
+  </div>
+
+  <script>
+    (() => {
+      const page=document.getElementById('market-research-page');
+      const themeBtn=document.getElementById('themeToggleBtn');
+      const icon=themeBtn.querySelector('.icon');
+
+      // Theme toggle
+      const applyTheme=t=>{
+        document.documentElement.setAttribute('data-theme',t);
+        icon.textContent=t==='dark'?'☀':'☾';
+      };
+      themeBtn.addEventListener('click',()=>{
+        const current=document.documentElement.getAttribute('data-theme');
+        applyTheme(current==='dark'?'light':'dark');
+      });
+
+      // Reveal on scroll
+      const revealEls=[...page.querySelectorAll('.reveal')];
+      const revealOnScroll=()=>{
+        const h=window.innerHeight;
+        revealEls.forEach(el=>el.classList.toggle('active',el.getBoundingClientRect().top<h-100));
+      };
+      window.addEventListener('scroll',revealOnScroll);
+      window.addEventListener('load',revealOnScroll);
+
+      // Particles
+      for(let i=0;i<35;i++){
+        const p=document.createElement('div');p.className='particle';
+        const s=6+Math.random()*14;
+        Object.assign(p.style,{
+          width:s+'px',height:s+'px',
+          left:Math.random()*window.innerWidth+'px',
+          top:Math.random()*window.innerHeight+'px',
+          animationDuration:(15+Math.random()*20)+'s',
+          opacity:0.6+Math.random()*0.4
+        });
+        page.appendChild(p);
+      }
+    })();
+  </script>
+  <script src="../script.js" defer></script>
+</body>
+</html>

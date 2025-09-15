@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Design | Rajinfoworks</title>
+  <meta name="description" content="Learn about Responsive Design: its importance, principles, process, and tools for creating adaptive, mobile-first interfaces.">
+  <meta name="author" content="Raj Sharma">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* ================= THEME VARIABLES ================= */
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --card-bg: rgba(25, 28, 38, 0.85);
+      --text: #e6e8eb;
+      --muted: #a1a4aa;
+      --primary: #00ffd5;
+      --accent: #ff4c6d;
+      --shadow: 0 15px 35px rgba(0,0,0,0.6);
+      --btn-bg: linear-gradient(135deg,var(--primary),var(--accent));
+      --btn-text: #0d1117;
+    }
+    [data-theme="light"] {
+      --bg: #f9fafc;
+      --card-bg: #fff;
+      --text: #1e1e1e;
+      --muted: #666;
+      --primary: #00c8ff;
+      --accent: #ff5a7a;
+      --shadow: 0 15px 35px rgba(0,0,0,0.1);
+      --btn-bg: linear-gradient(135deg,var(--primary),var(--accent));
+      --btn-text: #fff;
+    }
+
+    /* ================= BASE ================= */
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+      transition:background 0.4s,color 0.4s;
+    }
+    h1,h2,h3 { font-weight:700; }
+    p,li { font-size:1.05rem; }
+    a { text-decoration:none; color:var(--primary); transition:0.3s; }
+    a:hover { color:var(--accent); }
+
+    /* ================= HERO ================= */
+    .hero {
+      text-align:center;
+      padding:120px 20px 80px;
+    }
+    .hero h1 {
+      font-size:3rem;
+      background:linear-gradient(135deg,var(--primary),var(--accent));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-bottom:20px;
+    }
+    .hero p {
+      font-size:1.2rem;
+      color:var(--muted);
+      max-width:700px;
+      margin:0 auto;
+    }
+
+    /* ================= SECTIONS ================= */
+    .section {
+      max-width:1200px;
+      margin:0 auto;
+      padding:80px 20px;
+    }
+    .section h2 {
+      text-align:center;
+      font-size:2.2rem;
+      margin-bottom:15px;
+    }
+    .section-desc {
+      text-align:center;
+      color:var(--muted);
+      max-width:750px;
+      margin:0 auto 50px;
+    }
+
+    /* ================= CARDS & STEPS ================= */
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:24px;
+    }
+    .card {
+      background:var(--card-bg);
+      padding:24px;
+      border-radius:16px;
+      text-align:center;
+      box-shadow:var(--shadow);
+      transition:transform 0.3s ease, background 0.3s;
+    }
+    .card:hover { transform:translateY(-6px); }
+    .steps {
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    .step {
+      display:flex;
+      align-items:center;
+      gap:16px;
+      background:var(--card-bg);
+      padding:18px 22px;
+      border-radius:14px;
+      box-shadow:var(--shadow);
+      transition:transform 0.3s ease;
+    }
+    .step:hover { transform:translateX(6px); }
+    .step span {
+      background:var(--btn-bg);
+      color:var(--btn-text);
+      font-weight:700;
+      border-radius:50%;
+      padding:10px 14px;
+      font-size:0.95rem;
+      flex-shrink:0;
+    }
+
+    /* ================= CTA ================= */
+    .cta {
+      text-align:center;
+      padding:90px 20px;
+    }
+    .btn {
+      display:inline-block;
+      padding:14px 34px;
+      border-radius:30px;
+      background:var(--btn-bg);
+      color:var(--btn-text);
+      font-weight:600;
+      transition:transform 0.3s;
+    }
+    .btn:hover { transform:scale(1.07); }
+    .back-link {
+      display:block;
+      margin-top:20px;
+      color:var(--primary);
+      font-size:1rem;
+    }
+
+    /* ===== BACK LINK ===== */
+    .back-to-home {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 999;
+    }
+
+    /* ================= THEME TOGGLE ================= */
+    .theme-toggle {
+      position:fixed; top:20px; right:20px;
+      background:var(--btn-bg);
+      color:var(--btn-text);
+      border:none; border-radius:50%;
+      width:48px; height:48px;
+      display:flex; align-items:center; justify-content:center;
+      cursor:pointer;
+      box-shadow:var(--shadow);
+      transition:transform 0.3s;
+      z-index:999;
+    }
+    .theme-toggle:hover { transform:rotate(15deg) scale(1.1); }
+
+    @media(max-width:768px){
+      .hero h1 { font-size:2.2rem; }
+      .section h2 { font-size:1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Responsive Design</h1>
+    <p>Designing adaptive interfaces that look and feel perfect across devices of all sizes.</p>
+  </header>
+
+  <!-- What -->
+  <section class="section">
+    <h2>What is Responsive Design?</h2>
+    <p class="section-desc">
+      Responsive Design ensures that websites and apps automatically adjust their layout, navigation, and visuals 
+      across different screen sizes—delivering a seamless experience on mobile, tablet, laptop, and desktop.
+    </p>
+  </section>
+
+  <!-- Why -->
+  <section class="section">
+    <h2>Why It Matters</h2>
+    <p class="section-desc">Key benefits of building responsive experiences include:</p>
+    <div class="cards">
+      <div class="card">🌍 Universal Access</div>
+      <div class="card">📈 SEO-Friendly</div>
+      <div class="card">🌀 Consistent UX</div>
+      <div class="card">🔮 Future-Proof Layouts</div>
+    </div>
+  </section>
+
+  <!-- Principles -->
+  <section class="section">
+    <h2>Core Principles</h2>
+    <div class="steps">
+      <div class="step"><span>1</span> Fluid Grids & Flexible Layouts</div>
+      <div class="step"><span>2</span> Scalable Images & Media Queries</div>
+      <div class="step"><span>3</span> Mobile-First Approach</div>
+      <div class="step"><span>4</span> Touch-Friendly Interactions</div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <h2>Our Process</h2>
+    <div class="steps">
+      <div class="step"><span>1</span> Research & Define Devices</div>
+      <div class="step"><span>2</span> Wireframes & Breakpoints</div>
+      <div class="step"><span>3</span> Mobile-First Development</div>
+      <div class="step"><span>4</span> Testing Across Devices</div>
+      <div class="step"><span>5</span> Optimization & Launch</div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="section">
+    <h2>Tools & Frameworks</h2>
+    <div class="cards">
+      <div class="card">📐 CSS Grid & Flexbox</div>
+      <div class="card">🎨 Figma</div>
+      <div class="card">⚡ Tailwind / Bootstrap</div>
+      <div class="card">🛠 Chrome DevTools</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    
+    <!-- CTA Content (Centered) -->
+    <div class="cta-content">
+      <h2>Ready to Go Responsive?</h2>
+      <p>We craft adaptive layouts that guarantee accessibility and performance everywhere.</p>
+      <a href="../contact.html" class="btn">📱 Let’s Build</a>
+    </div>
+  </div>
+</section>
+<!-- Back -->
+  <a href="../sevices/ux-ui-design.html" class="back-to-home">⮜ Back</a>
+
+  <script>
+  // Theme Toggle Logic with Persistence
+  const toggleBtn = document.getElementById("themeToggle");
+  const html = document.documentElement;
+
+  // Load saved theme or default to dark
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  html.setAttribute("data-theme", savedTheme);
+  toggleBtn.textContent = savedTheme === "dark" ? "☀" : "☾";
+
+  // Toggle on click
+  toggleBtn.addEventListener("click", () => {
+    const currentTheme = html.getAttribute("data-theme");
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", nextTheme);
+
+    // Switch button icon
+    toggleBtn.textContent = nextTheme === "dark" ? "☀" : "☾";
+
+    // Save theme
+    localStorage.setItem("theme", nextTheme);
+  });
+</script>
+
+</body>
+</html>

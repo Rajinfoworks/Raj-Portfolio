@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🖌️ Prototyping & Wireframes | Rajinfoworks</title>
+  <meta name="description" content="Prototyping & Wireframes services by Rajinfoworks. From low-fidelity sketches to interactive prototypes, validate UX and design before coding.">
+  <meta name="keywords" content="Prototyping, Wireframes, UX Design, UI, Rajinfoworks, Mockups, Design Thinking">
+  <meta name="author" content="Raj Sharma">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* ==== THEME ==== */
+    [data-theme="dark"] {
+      --bg:#0b0c10; --text:#e6e6e6; --muted:#a8a8a8;
+      --brand:#ff6a00; --brand-2:#5548ec; --accent:#fff;
+      --card:#141620; --border:rgba(255,255,255,0.1);
+      --glow:rgba(255,106,0,0.6);
+    }
+    [data-theme="light"] {
+      --bg:#fdfdfd; --text:#1a1a1a; --muted:#555;
+      --brand:#ff6a00; --brand-2:#5548ec; --accent:#000;
+      --card:#fff; --border:rgba(0,0,0,0.08);
+      --glow:rgba(255,106,0,0.4);
+    }
+
+    body {
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+      overflow-x:hidden;
+      text-align:center; /* ✅ All text aligned center */
+    }
+
+    h1 { font-size:3rem;margin:40px 0; }
+    h2 { margin:50px 0 20px;color:var(--brand); }
+    p,li { color:var(--muted); font-size:1.1rem; }
+
+    ul {
+      list-style:none;
+      padding:0;
+      margin:0 auto 30px;
+      max-width:800px;
+    }
+    ul li { margin:10px 0; }
+
+    /* ==== PROTOTYPE DEMO ==== */
+    .prototype-demo {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      margin:60px auto;
+      max-width:1100px;
+      padding:20px;
+    }
+    .wireframe {
+      background:var(--card);
+      border:2px dashed var(--border);
+      border-radius:12px;
+      padding:20px;
+      min-height:200px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      transition:transform 0.4s ease,box-shadow 0.4s ease;
+    }
+    .wireframe:hover {
+      transform:scale(1.05);
+      box-shadow:0 0 20px var(--glow);
+    }
+    .wireframe .box {
+      background:var(--brand);
+      opacity:0.2;
+      width:80%;
+      height:20px;
+      margin:8px 0;
+      border-radius:6px;
+      animation:pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%{opacity:0.2;}50%{opacity:0.6;}100%{opacity:0.2;}
+    }
+
+    /* ==== REVEAL ==== */
+    .reveal{opacity:0;transform:translateY(40px);transition:all 1s ease;}
+    .reveal.active{opacity:1;transform:translateY(0);}
+
+    /* ==== PARTICLES ==== */
+    .particle {
+      position:absolute;border-radius:50%;background:var(--brand-2);
+      pointer-events:none;opacity:0.15;filter:blur(2px);
+      animation:float 25s linear infinite;
+    }
+    @keyframes float {from{transform:translateY(0);}to{transform:translateY(-1500px);} }
+
+    /* ==== THEME TOGGLE ==== */
+    .theme-toggle-btn {
+      position:fixed;top:20px;right:20px;background:var(--brand);
+      color:#fff;border:none;padding:12px;border-radius:50%;
+      cursor:pointer;z-index:10;font-size:1.2rem;
+    }
+
+    /* ==== BACK LINK ==== */
+    .back-to-home{
+      position:fixed; bottom:30px; left:30px;
+      display:flex; align-items:center; gap:8px;
+      font-weight:600; font-size:1.2rem; color:var(--brand);
+      text-decoration:none; z-index:9999; cursor:pointer;
+      text-shadow:0 2px 8px rgba(0,0,0,0.5);
+      transition:all 0.3s ease;
+    }
+    .back-to-home:hover{color:var(--accent); transform:translateX(-6px);}
+  </style>
+</head>
+<body>
+  <!-- THEME TOGGLE -->
+  <button id="themeToggleBtn" class="theme-toggle-btn">☾</button>
+
+  <h1 class="reveal">🖌️ Prototyping & Wireframes</h1>
+  <p class="reveal" style="max-width:900px;margin:0 auto;">
+    Prototyping and wireframing bring ideas to life <strong>before writing a single line of code</strong>.  
+    At <strong>Rajinfoworks</strong>, we help teams move from rough sketches to interactive prototypes — ensuring usability, efficiency, and clarity.  
+  </p>
+
+  <h2 class="reveal">Why It Matters 🎯</h2>
+  <ul class="reveal">
+    <li>📐 Visualize structure and flows early.</li>
+    <li>⚡ Save development time by testing before coding.</li>
+    <li>👥 Gather user feedback faster with clickable prototypes.</li>
+    <li>🎯 Align stakeholders on design direction.</li>
+  </ul>
+
+  <h2 class="reveal">Prototype Stages 🔄</h2>
+  <ul class="reveal">
+    <li>✏️ Low-fidelity wireframes → basic layouts & content blocks.</li>
+    <li>🎨 Mid-fidelity → UX flows with clearer components.</li>
+    <li>💻 High-fidelity → pixel-perfect, interactive mockups.</li>
+    <li>🖱️ Clickable prototypes → user testing & validation.</li>
+  </ul>
+
+  <!-- PROTOTYPE DEMO BLOCKS -->
+  <div class="prototype-demo reveal">
+    <div class="wireframe">
+      <div class="box"></div><div class="box"></div><div class="box"></div>
+      <p>Low-Fidelity Sketch</p>
+    </div>
+    <div class="wireframe">
+      <div class="box"></div><div class="box"></div><div class="box"></div>
+      <p>Mid-Fidelity Wireframe</p>
+    </div>
+    <div class="wireframe">
+      <div class="box"></div><div class="box"></div><div class="box"></div>
+      <p>High-Fidelity Prototype</p>
+    </div>
+  </div>
+
+  <h2 class="reveal">Tools We Use 🛠️</h2>
+  <ul class="reveal">
+    <li>📐 Figma & Sketch for collaborative wireframes.</li>
+    <li>🖥️ Adobe XD for interactive prototypes.</li>
+    <li>👥 Miro / FigJam for brainstorming sessions.</li>
+    <li>⚡ InVision for clickable mockups.</li>
+  </ul>
+
+  <h2 class="reveal">Benefits 🌟</h2>
+  <ul class="reveal">
+    <li>🚀 Faster design iterations.</li>
+    <li>📊 Data-driven decisions from user testing.</li>
+    <li>💸 Reduce costly design changes post-development.</li>
+    <li>🤝 Stronger stakeholder alignment.</li>
+  </ul>
+
+  <h2 class="reveal">Get Started 🚀</h2>
+  <p class="reveal" style="max-width:900px;margin:0 auto;">
+    Whether you’re designing a new app or improving an existing one, prototyping helps you fail fast and learn faster.  
+    Let <strong>Rajinfoworks</strong> turn your concepts into validated, user-friendly designs that truly connect.  
+  </p>
+
+  <!-- BACK LINK -->
+  <a href="../sevices/product-strategy.html" class="back-to-home">
+    <span class="arrow">⮜</span>
+    <span class="text">Back to Services</span>
+  </a>
+
+  <script>
+    // Theme toggle
+    const themeBtn=document.getElementById("themeToggleBtn");
+    themeBtn.addEventListener("click",()=>{
+      const cur=document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme",cur==="dark"?"light":"dark");
+      themeBtn.textContent=cur==="dark"?"☾":"☀";
+    });
+
+    // Reveal on scroll
+    const revealEls=document.querySelectorAll(".reveal");
+    const onScroll=()=>{
+      revealEls.forEach(el=>{
+        if(el.getBoundingClientRect().top<window.innerHeight-100) el.classList.add("active");
+      });
+    };
+    window.addEventListener("scroll",onScroll);window.addEventListener("load",onScroll);
+
+    // Particles
+    for(let i=0;i<25;i++){
+      const p=document.createElement("div");
+      p.className="particle";
+      const s=6+Math.random()*12;
+      Object.assign(p.style,{
+        width:s+"px",height:s+"px",left:Math.random()*window.innerWidth+"px",
+        top:Math.random()*window.innerHeight+"px",animationDuration:(20+Math.random()*20)+"s"
+      });
+      document.body.appendChild(p);
+    }
+  </script>
+  <script src="../script.js" defer></script>
+</body>
+</html>

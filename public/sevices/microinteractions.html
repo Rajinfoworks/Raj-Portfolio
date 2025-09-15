@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microinteractions | UX/UI Design | Rajinfoworks</title>
+  <meta name="description" content="All about Microinteractions: what they are, why they matter, principles, benefits, process, examples, and tools to enhance UX with delightful details.">
+  <meta name="author" content="Raj Sharma">
+  <meta name="robots" content="index, follow">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Raj Sharma | Web Developer & Designer">
+  <meta property="og:description" content="Raj Sharma — Building modern, responsive websites and digital solutions with delightful microinteractions.">
+  <meta property="og:image" content="https://raj-portfolio-nuu4.onrender.com/images/preview-image.jpg">
+  <meta property="og:url" content="https://raj-portfolio-nuu4.onrender.com/">
+  <meta property="og:site_name" content="Rajinfoworks">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Raj Sharma | Web Developer & Designer">
+  <meta name="twitter:description" content="Creating modern, interactive, and user-friendly websites with smooth microinteractions.">
+  <meta name="twitter:image" content="https://raj-portfolio-nuu4.onrender.com/images/preview-image.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://raj-portfolio-nuu4.onrender.com/">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* ===== THEME VARIABLES ===== */
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --text: #e6e6e6;
+      --muted: #a1a3a8;
+      --primary: #00ffd5;
+      --accent: #ff4c6d;
+      --card-bg: rgba(255,255,255,0.05);
+      --shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    [data-theme="light"] {
+      --bg: #f9f9fb;
+      --text: #1b1b1b;
+      --muted: #555;
+      --primary: #00bcd4;
+      --accent: #e91e63;
+      --card-bg: #fff;
+      --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* ===== RESET ===== */
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    h1,h2,h3,h4 { margin-bottom: 12px; font-weight: 700; }
+    p { margin-bottom: 18px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 800px; margin: 0 auto; }
+
+    /* ===== SECTIONS ===== */
+    .section { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .section-desc { color: var(--muted); text-align: center; margin-bottom: 40px; }
+
+    /* ===== INFO BLOCKS ===== */
+    .info {
+      background: var(--card-bg);
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease, background 0.4s ease;
+    }
+    .info:hover { transform: translateY(-5px); }
+    .info h3 { color: var(--primary); margin-bottom: 10px; }
+
+    /* ===== TIMELINE ===== */
+    .timeline { margin-top: 40px; border-left: 3px solid var(--accent); padding-left: 20px; }
+    .timeline-step { margin-bottom: 30px; position: relative; }
+    .timeline-step::before {
+      content: "●";
+      position: absolute;
+      left: -33px;
+      top: 0;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+    .timeline-step strong { color: var(--primary); }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 14px 36px;
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      color: #fff;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+    .cta a:hover { transform: scale(1.05); }
+
+    /* ===== THEME TOGGLE ===== */
+    .theme-toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 14px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      color: #fff;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease;
+      z-index: 999;
+    }
+    .theme-toggle-btn:hover { transform: rotate(15deg) scale(1.1); }
+
+    /* ===== BACK LINK ===== */
+    .back-to-home {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggleBtn" class="theme-toggle-btn">☾</button>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Microinteractions</h1>
+    <p>Small details that make a big impact — guiding, engaging, and delighting users through meaningful feedback and animations.</p>
+  </header>
+
+  <!-- What are Microinteractions -->
+  <section class="section">
+    <h2 class="section-title">What are Microinteractions?</h2>
+    <div class="info">
+      <p>Microinteractions are the **tiny, functional animations and responses** that happen within a digital product. From a button ripple to a swipe gesture, they provide instant feedback, make systems easier to use, and bring interfaces to life.</p>
+      <p>They are the **bridge between user and system**, turning routine tasks into engaging moments.</p>
+    </div>
+  </section>
+
+  <!-- Why They Matter -->
+  <section class="section">
+    <h2 class="section-title">Why Microinteractions Matter</h2>
+    <div class="info">
+      <ul>
+        <li>⚡ Provide instant feedback and clarity.</li>
+        <li>🎯 Improve usability by guiding user actions.</li>
+        <li>✨ Add delight and personality to the product.</li>
+        <li>🔗 Strengthen the emotional bond with users.</li>
+        <li>📱 Make products feel modern, smooth, and polished.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Principles -->
+  <section class="section">
+    <h2 class="section-title">Core Principles of Microinteractions</h2>
+    <div class="info">
+      <p><strong>1. Trigger:</strong> Every microinteraction starts with an action — a click, tap, or system event.</p>
+      <p><strong>2. Feedback:</strong> The system responds with visual, audio, or haptic signals.</p>
+      <p><strong>3. Rules:</strong> Define how the interaction behaves under different scenarios.</p>
+      <p><strong>4. Loops & Modes:</strong> Handle repetition, extended states, or special cases gracefully.</p>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="section">
+    <h2 class="section-title">Our Microinteraction Design Process</h2>
+    <div class="timeline">
+      <div class="timeline-step"><strong>1. Identify:</strong> Detect opportunities where microinteractions improve UX.</div>
+      <div class="timeline-step"><strong>2. Conceptualize:</strong> Map out triggers, feedback, and rules.</div>
+      <div class="timeline-step"><strong>3. Prototype:</strong> Design interactions using tools like Figma & After Effects.</div>
+      <div class="timeline-step"><strong>4. Implement:</strong> Develop lightweight animations with CSS/JS or Lottie.</div>
+      <div class="timeline-step"><strong>5. Test & Refine:</strong> Validate with users to ensure delight and clarity.</div>
+    </div>
+  </section>
+
+  <!-- Examples -->
+  <section class="section">
+    <h2 class="section-title">Examples of Microinteractions</h2>
+    <div class="info">
+      <ul>
+        <li>✅ Checkbox animations confirming a task.</li>
+        <li>💬 Chat message "typing…" indicators.</li>
+        <li>🔔 Notification bell shake when alerts arrive.</li>
+        <li>👍 Like button with playful feedback.</li>
+        <li>🔄 Pull-to-refresh loading animations.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="section">
+    <h2 class="section-title">Tools We Use</h2>
+    <div class="info">
+      <p>For prototyping and developing microinteractions, we use:</p>
+      <ul>
+        <li>🎨 Figma Smart Animate</li>
+        <li>📽️ Adobe After Effects + Lottie</li>
+        <li>💻 CSS & JavaScript animations</li>
+        <li>⚡ Framer Motion</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Add Delight to Your Product</h2>
+    <p>Microinteractions turn routine digital experiences into joyful, memorable journeys. Let us help you craft interfaces that users love.</p>
+    <a href="../index.html#contact">🚀 Start with Microinteractions</a>
+  </section>
+
+  <!-- Back -->
+  <a href="../sevices/ux-ui-design.html" class="back-to-home">⮜ Back</a>
+
+  <script>
+    // THEME TOGGLE
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeBtn.textContent = savedTheme === 'dark' ? '☀' : '☾';
+
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      themeBtn.textContent = next === 'dark' ? '☀' : '☾';
+      localStorage.setItem('theme', next);
+    });
+  </script>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>

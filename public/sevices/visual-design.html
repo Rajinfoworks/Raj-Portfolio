@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Design | UX/UI Design | Rajinfoworks</title>
+  <meta name="description" content="All about Visual Design: its role in UX/UI, principles, benefits, process, tools, and best practices to create stunning user interfaces.">
+  <meta name="author" content="Raj Sharma">
+  <meta name="robots" content="index, follow">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Raj Sharma | Web Developer & Designer">
+  <meta property="og:description" content="Raj Sharma — Building modern, responsive websites and digital solutions with clean design and SEO focus.">
+  <meta property="og:image" content="https://raj-portfolio-nuu4.onrender.com/images/preview-image.jpg">
+  <meta property="og:url" content="https://raj-portfolio-nuu4.onrender.com/">
+  <meta property="og:site_name" content="Rajinfoworks">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Raj Sharma | Web Developer & Designer">
+  <meta name="twitter:description" content="Creating clean, modern, and SEO-friendly websites for businesses worldwide.">
+  <meta name="twitter:image" content="https://raj-portfolio-nuu4.onrender.com/images/preview-image.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://raj-portfolio-nuu4.onrender.com/">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* ===== THEME VARIABLES ===== */
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --text: #e6e6e6;
+      --muted: #a1a3a8;
+      --primary: #00ffd5;
+      --accent: #ff4c6d;
+      --card-bg: rgba(255,255,255,0.05);
+      --shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    [data-theme="light"] {
+      --bg: #f9f9fb;
+      --text: #1b1b1b;
+      --muted: #555;
+      --primary: #00bcd4;
+      --accent: #e91e63;
+      --card-bg: #fff;
+      --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* ===== RESET ===== */
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    h1,h2,h3,h4 { margin-bottom: 12px; font-weight: 700; }
+    p { margin-bottom: 18px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 800px; margin: 0 auto; }
+
+    /* ===== SECTIONS ===== */
+    .section { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .section-desc { color: var(--muted); text-align: center; margin-bottom: 40px; }
+
+    /* ===== INFO BLOCKS ===== */
+    .info {
+      background: var(--card-bg);
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease, background 0.4s ease;
+    }
+    .info:hover { transform: translateY(-5px); }
+    .info h3 { color: var(--primary); margin-bottom: 10px; }
+
+    /* ===== TIMELINE ===== */
+    .timeline { margin-top: 40px; border-left: 3px solid var(--accent); padding-left: 20px; }
+    .timeline-step { margin-bottom: 30px; position: relative; }
+    .timeline-step::before {
+      content: "●";
+      position: absolute;
+      left: -33px;
+      top: 0;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+    .timeline-step strong { color: var(--primary); }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 14px 36px;
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      color: #fff;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+    .cta a:hover { transform: scale(1.05); }
+
+    /* ===== THEME TOGGLE ===== */
+    .theme-toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 14px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      color: #fff;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease;
+      z-index: 999;
+    }
+    .theme-toggle-btn:hover { transform: rotate(15deg) scale(1.1); }
+
+    /* ===== BACK LINK ===== */
+    .back-to-home {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggleBtn" class="theme-toggle-btn">☾</button>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Visual Design</h1>
+    <p>Transforming functional layouts into visually stunning, brand-consistent, and emotionally engaging experiences for users.</p>
+  </header>
+
+  <!-- What is Visual Design -->
+  <section class="section">
+    <h2 class="section-title">What is Visual Design?</h2>
+    <div class="info">
+      <p>Visual Design focuses on the aesthetics of a product’s user interface. It combines **colors, typography, imagery, spacing, and layouts** to craft interfaces that not only look appealing but also support usability and accessibility.</p>
+      <p>It’s where **creativity meets strategy** — turning functionality into beautiful, intuitive products.</p>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="section">
+    <h2 class="section-title">Why Visual Design Matters</h2>
+    <div class="info">
+      <ul>
+        <li>🎨 Creates strong first impressions and brand identity.</li>
+        <li>💡 Improves readability and information hierarchy.</li>
+        <li>🔗 Builds trust and emotional connection with users.</li>
+        <li>📱 Ensures consistency across all devices and platforms.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Principles -->
+  <section class="section">
+    <h2 class="section-title">Core Principles of Visual Design</h2>
+    <div class="info">
+      <p><strong>1. Balance:</strong> Maintain harmony between visual elements.</p>
+      <p><strong>2. Contrast:</strong> Use colors and typography to highlight key content.</p>
+      <p><strong>3. Alignment:</strong> Ensure structured layouts for clarity.</p>
+      <p><strong>4. Consistency:</strong> Reuse patterns for familiarity and usability.</p>
+      <p><strong>5. Accessibility:</strong> Design for inclusivity and diverse users.</p>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="section">
+    <h2 class="section-title">Our Visual Design Process</h2>
+    <div class="timeline">
+      <div class="timeline-step"><strong>1. Brand Research:</strong> Understand brand values and user expectations.</div>
+      <div class="timeline-step"><strong>2. Style Guide Creation:</strong> Define colors, typography, and iconography.</div>
+      <div class="timeline-step"><strong>3. High-Fidelity Mockups:</strong> Build polished interfaces aligned with the brand.</div>
+      <div class="timeline-step"><strong>4. Usability Check:</strong> Validate design choices with accessibility standards.</div>
+      <div class="timeline-step"><strong>5. Delivery:</strong> Provide assets and design systems for development.</div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="section">
+    <h2 class="section-title">Tools We Use</h2>
+    <div class="info">
+      <p>To create pixel-perfect visual designs, we use:</p>
+      <ul>
+        <li>🎨 Figma</li>
+        <li>🖌️ Adobe Illustrator</li>
+        <li>📷 Photoshop</li>
+        <li>📐 Sketch</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Bring Your Vision to Life</h2>
+    <p>Our visual design services turn wireframes and ideas into beautiful, functional products your users will love.</p>
+    <a href="../index.html#contact">✨ Request Visual Design</a>
+  </section>
+
+  <!-- Back -->
+  <a href="../sevices/ux-ui-design.html" class="back-to-home">⮜ Back</a>
+
+  <script>
+    // THEME TOGGLE
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeBtn.textContent = savedTheme === 'dark' ? '☀' : '☾';
+
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      themeBtn.textContent = next === 'dark' ? '☀' : '☾';
+      localStorage.setItem('theme', next);
+    });
+  </script>
+
+<script src="../script.js" defer></script>
+
+</body>
+</html>

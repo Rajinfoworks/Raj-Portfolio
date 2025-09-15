@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🗺️ Roadmap & Feature Prioritization | Rajinfoworks</title>
+  <meta name="description" content="Complete guide to Roadmap & Feature Prioritization by Rajinfoworks. Learn methods, frameworks, benefits, tools, and see a visual roadmap with animations.">
+  <meta name="author" content="Raj Sharma">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* ================= THEME VARIABLES ================= */
+    [data-theme="dark"] {
+      --bg: #0b0c10; --bg-elev: #111218; --text: #e6e6e6; --muted: #a8a8a8;
+      --brand: #5548ec; --brand-2: #ff6a00; --accent: #ffffff; --card: #141620;
+      --border: rgba(255, 255, 255, 0.08); --shadow: 0 10px 30px rgba(0,0,0,0.35); --radius: 14px;
+      --gradient1: #0d0e14; --gradient2: #12141c; --gradient3: #161723;
+      --btn-bg: linear-gradient(135deg, var(--brand), var(--brand-2)); --btn-text: #0b0c10;
+      --particle-color: rgba(249,178,52,0.15); --glow-color: rgba(249,178,52,0.4);
+    }
+    [data-theme="light"] {
+      --bg: #fafafa; --bg-elev: #ffffff; --text: #1a1a1a; --muted: #5a5a5a;
+      --brand: #5548ec; --brand-2: #ff6a00; --accent: #000000; --card: #ffffff;
+      --border: rgba(0,0,0,0.08); --shadow: 0 10px 30px rgba(0,0,0,0.15); --radius: 14px;
+      --gradient1: #f5f5f5; --gradient2: #fffaf3; --gradient3: #fff4e5;
+      --btn-bg: linear-gradient(135deg, var(--brand), var(--brand-2)); --btn-text: #ffffff;
+      --particle-color: rgba(249,178,52,0.08); --glow-color: rgba(249,178,52,0.2);
+    }
+
+    /* ================= BASE ================= */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;overflow-x:hidden;}
+    h1,h2,h3,p,li,strong,a{color:var(--text);}
+    a{color:var(--brand);transition:color 0.3s;}
+    a:hover{color:var(--accent);}
+    .container{max-width:1200px;margin:0 auto;padding:80px 20px;position:relative;z-index:2;}
+    h1{font-size:3rem;text-align:center;margin-bottom:30px;}
+    h2{font-size:2rem;margin:60px 0 30px;text-align:center;color:var(--brand);}
+    p{margin-bottom:18px;color:var(--muted);}
+    ul{margin-left:20px;margin-bottom:30px;}
+    li{margin-bottom:12px;}
+
+    /* ================= BACKGROUND ================= */
+    #roadmap-page::before {
+      content: ""; position: fixed; inset: 0;
+      background: linear-gradient(135deg, var(--gradient1), var(--gradient2), var(--gradient3));
+      background-size: 600% 600%; filter: blur(100px);
+      animation: bgSmoothMove 60s ease infinite; z-index: 0;
+    }
+    @keyframes bgSmoothMove {
+      0%{background-position:0% 50%}25%{background-position:50% 75%}
+      50%{background-position:100% 50%}75%{background-position:50% 25%}
+      100%{background-position:0% 50%}
+    }
+
+    /* ================= PARTICLES ================= */
+    .particle { position: absolute; border-radius: 50%; background: var(--particle-color); pointer-events: none; animation: floatParticle linear infinite; filter: blur(2px); }
+    @keyframes floatParticle {
+      0%{transform:translateY(0) scale(0.8);opacity:0.6}
+      50%{transform:translateY(-600px) scale(1.1);opacity:0.3}
+      100%{transform:translateY(-1200px) scale(0.8);opacity:0.6}
+    }
+
+    /* ================= ROADMAP TIMELINE ================= */
+    .roadmap {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      position: relative; margin: 100px auto; padding: 0 20px; max-width: 1100px;
+    }
+    .roadmap::before {
+      content: ""; position: absolute; top: 60px; left: 0; right: 0; height: 6px;
+      background: rgba(255,255,255,0.15); border-radius: 3px; z-index: 1;
+    }
+    .roadmap-progress {
+      content: ""; position: absolute; top: 60px; left: 0; height: 6px;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      border-radius: 3px; z-index: 2; width: 0; transition: width 1.5s ease;
+    }
+    .milestone {
+      position: relative; z-index: 3; text-align: center; width: 16%;
+      opacity: 0; transform: translateY(40px); transition: all 1s ease;
+    }
+    .milestone.active { opacity: 1; transform: translateY(0); }
+    .milestone .circle {
+      width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 50%;
+      background: var(--card); display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; box-shadow: 0 0 20px var(--glow-color);
+      border: 2px solid var(--brand-2); transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .milestone:hover .circle { transform: scale(1.2) rotate(5deg); box-shadow: 0 0 35px var(--brand-2); }
+    .milestone h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--accent); }
+    .milestone p { font-size: 0.95rem; color: var(--muted); }
+
+    /* ================= BACK LINK ================= */
+    .back-to-home{
+      position:fixed; bottom:30px; left:30px; display:inline-flex; align-items:center; gap:8px;
+      font-weight:600; font-size:1.2rem; color:var(--brand); text-decoration:none; z-index:9999;
+      cursor:pointer; transition:color 0.3s ease, transform 0.3s ease;
+    }
+    .back-to-home .arrow{animation:bounceArrow 1.2s ease-in-out infinite;}
+    .back-to-home:hover{color: var(--accent); transform:translateX(-6px);}
+    @keyframes bounceArrow{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+
+    /* ================= THEME TOGGLE ================= */
+    .theme-toggle-btn { position: fixed; top:20px; right:20px; z-index:999; background: var(--btn-bg); color: var(--btn-text); border:none; padding:12px 16px; border-radius:50%; cursor:pointer; font-size:1.4rem; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(0,0,0,0.15); transition:transform 0.4s ease; }
+    .theme-toggle-btn.toggle .icon { transform: rotate(360deg); transition: transform 0.6s ease; }
+
+    /* ================= REVEAL ================= */
+    .reveal{opacity:0;transform:translateY(40px);transition:all 1s ease;}
+    .reveal.active{opacity:1;transform:translateY(0);}
+  </style>
+</head>
+<body>
+
+  <!-- THEME TOGGLE -->
+  <button id="themeToggleBtn" class="theme-toggle-btn"><span class="icon">☾</span></button>
+
+  <div id="roadmap-page">
+    <div class="container">
+      <h1 class="reveal">🗺️ Roadmap & Feature Prioritization</h1>
+      <p class="reveal">A product roadmap is more than a timeline — it’s your strategic compass. At <strong>Rajinfoworks</strong>, we turn chaos into clarity by helping teams prioritize features, align stakeholders, and execute with confidence. 🚀</p>
+
+      <!-- ROADMAP VISUAL -->
+      <div class="roadmap">
+        <div class="roadmap-progress"></div>
+        <div class="milestone"><div class="circle">🔎</div><h3>Research</h3><p>User & market insights.</p></div>
+        <div class="milestone"><div class="circle">⚖️</div><h3>Prioritize</h3><p>Frameworks: RICE, MoSCoW, Kano.</p></div>
+        <div class="milestone"><div class="circle">🛠️</div><h3>Plan</h3><p>Define roadmap, owners & timelines.</p></div>
+        <div class="milestone"><div class="circle">💻</div><h3>Build</h3><p>Develop high-value features.</p></div>
+        <div class="milestone"><div class="circle">🚀</div><h3>Launch</h3><p>Deliver product impact.</p></div>
+        <div class="milestone"><div class="circle">📈</div><h3>Iterate</h3><p>Measure, adapt & improve.</p></div>
+      </div>
+
+      <h2 class="reveal">Why Roadmaps Matter 🎯</h2>
+      <ul class="reveal">
+        <li>⚡ Align product vision with daily execution.</li>
+        <li>👥 Keep development laser-focused on user value.</li>
+        <li>📈 Maximize ROI by focusing on high-impact items.</li>
+        <li>🕒 Accelerate time-to-market and avoid delays.</li>
+        <li>🏆 Improve transparency and stakeholder trust.</li>
+      </ul>
+
+      <h2 class="reveal">Popular Frameworks 📊</h2>
+      <ul class="reveal">
+        <li>🔢 <strong>MoSCoW</strong> → Must-have, Should-have, Could-have, Won’t-have.</li>
+        <li>📊 <strong>RICE</strong> → Reach × Impact × Confidence ÷ Effort.</li>
+        <li>⚖️ <strong>Kano Model</strong> → Classify features as Basic, Performance, Excitement.</li>
+        <li>🚦 <strong>Value vs Effort Matrix</strong> → Quick wins vs long-term bets.</li>
+      </ul>
+
+      <h2 class="reveal">Roadmap Styles 🛣️</h2>
+      <ul class="reveal">
+        <li>📅 Time-based → Quarterly or monthly goals.</li>
+        <li>🎯 Goal-oriented → Aligned with OKRs & outcomes.</li>
+        <li>🧑‍🤝‍🧑 Team-specific → Engineering, Design, Marketing.</li>
+        <li>🚀 Theme-based → Innovation, Growth, Optimization.</li>
+      </ul>
+
+      <h2 class="reveal">Benefits 🌟</h2>
+      <ul class="reveal">
+        <li>📌 Alignment between strategy & execution.</li>
+        <li>🚀 Faster launches of the right features.</li>
+        <li>🎯 Clarity that reduces scope creep.</li>
+        <li>🔍 Transparent communication with all stakeholders.</li>
+        <li>💡 Flexibility to adapt to change.</li>
+      </ul>
+
+      <h2 class="reveal">Get Started 🚀</h2>
+      <p class="reveal">Ready to design your roadmap with precision? Let <strong>Rajinfoworks</strong> guide you in prioritization and execution. Together, we’ll transform vision into measurable outcomes.</p>
+    </div>
+
+    <!-- BACK LINK -->
+    <a href="../sevices/product-strategy.html" class="back-to-home">
+      <span class="arrow">⮜</span> Back to Services
+    </a>
+  </div>
+
+  <script>
+  (() => {
+    const page = document.getElementById('roadmap-page');
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const icon = themeBtn.querySelector('.icon');
+
+    // Theme toggle
+    const applyTheme = t => {
+      document.documentElement.setAttribute('data-theme', t);
+      icon.textContent = t==='dark'?'☀':'☾';
+    };
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      applyTheme(current==='dark'?'light':'dark');
+    });
+
+    // Scroll reveal
+    const revealEls = [...page.querySelectorAll('.reveal')];
+    const revealOnScroll = () => {
+      const h = window.innerHeight;
+      revealEls.forEach(el => {
+        if(el.getBoundingClientRect().top < h - 100) el.classList.add('active');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // Particles
+    for(let i=0;i<35;i++){
+      const p=document.createElement('div');
+      p.className='particle';
+      const s=4+Math.random()*10;
+      Object.assign(p.style,{width:s+'px',height:s+'px',left:Math.random()*window.innerWidth+'px',top:Math.random()*window.innerHeight+'px',animationDuration:(15+Math.random()*20)+'s',opacity:Math.random()});
+      page.appendChild(p);
+    }
+
+    // Roadmap progressive animation
+    const milestones = [...document.querySelectorAll('.milestone')];
+    const progress = document.querySelector('.roadmap-progress');
+    let animated = false;
+    const animateRoadmap = () => {
+      const rect = progress.getBoundingClientRect();
+      if(!animated && rect.top < window.innerHeight-150){
+        milestones.forEach((m,i)=>{
+          setTimeout(()=>m.classList.add('active'), i*500);
+        });
+        progress.style.width = "100%";
+        animated = true;
+      }
+    };
+    window.addEventListener('scroll', animateRoadmap);
+    window.addEventListener('load', animateRoadmap);
+  })();
+  </script>
+  <script src="../script.js" defer></script>
+</body>
+</html>

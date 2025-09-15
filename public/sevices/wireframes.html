@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframes | UX/UI Design | Rajinfoworks</title>
+  <meta name="description" content="Comprehensive guide to wireframes: what they are, why they matter, types, process, tools, and best practices for UX/UI design.">
+  <meta name="author" content="Raj Sharma">
+  <meta name="robots" content="index, follow">
+  <meta name="color-scheme" content="dark light">
+<!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Raj Sharma | Web Developer & Designer">
+  <meta property="og:description" content="Raj Sharma — Building modern, responsive websites and digital solutions with clean design and SEO focus.">
+  <meta property="og:image" content="https://raj-portfolio-nuu4.onrender.com/images/preview-image.jpg">
+  <meta property="og:url" content="https://raj-portfolio-nuu4.onrender.com/">
+  <meta property="og:site_name" content="Rajinfoworks">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Raj Sharma | Web Developer & Designer">
+  <meta name="twitter:description" content="Creating clean, modern, and SEO-friendly websites for businesses worldwide.">
+  <meta name="twitter:image" content="https://raj-portfolio-nuu4.onrender.com/images/preview-image.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://raj-portfolio-nuu4.onrender.com/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* ===== THEME VARIABLES ===== */
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --text: #e6e6e6;
+      --muted: #a1a3a8;
+      --primary: #00ffd5;
+      --accent: #ff4c6d;
+      --card-bg: rgba(255,255,255,0.05);
+      --shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    [data-theme="light"] {
+      --bg: #f9f9fb;
+      --text: #1b1b1b;
+      --muted: #555;
+      --primary: #00bcd4;
+      --accent: #e91e63;
+      --card-bg: #fff;
+      --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* ===== RESET ===== */
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    h1,h2,h3,h4 { margin-bottom: 12px; font-weight: 700; }
+    p { margin-bottom: 18px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 800px; margin: 0 auto; }
+
+    /* ===== SECTIONS ===== */
+    .section { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .section-desc { color: var(--muted); text-align: center; margin-bottom: 40px; }
+
+    /* ===== INFO BLOCKS ===== */
+    .info {
+      background: var(--card-bg);
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+    .info:hover { transform: translateY(-5px); }
+    .info h3 { color: var(--primary); margin-bottom: 10px; }
+
+    /* ===== PROCESS TIMELINE ===== */
+    .timeline { margin-top: 40px; border-left: 3px solid var(--accent); padding-left: 20px; }
+    .timeline-step { margin-bottom: 30px; position: relative; }
+    .timeline-step::before {
+      content: "●";
+      position: absolute;
+      left: -33px;
+      top: 0;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+    .timeline-step strong { color: var(--primary); }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 14px 36px;
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      color: #fff;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+    .cta a:hover { transform: scale(1.05); }
+
+    /* ===== THEME TOGGLE ===== */
+    .theme-toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 14px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      color: #fff;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease;
+      z-index: 999;
+    }
+    .theme-toggle-btn:hover { transform: rotate(15deg) scale(1.1); }
+
+    /* ===== BACK LINK ===== */
+    .back-to-home {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggleBtn" class="theme-toggle-btn">☾</button>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Wireframes</h1>
+    <p>Blueprints of your digital product — turning abstract ideas into clear, structured layouts before full design & development.</p>
+  </header>
+
+  <!-- What are Wireframes -->
+  <section class="section">
+    <h2 class="section-title">What are Wireframes?</h2>
+    <div class="info">
+      <p>Wireframes are simplified, low-fidelity representations of your product’s interface. They map out the structure, hierarchy, and functionality without focusing on colors or visuals.</p>
+      <p>Think of wireframes as the **blueprint** of a house: they show the layout and flow before painting the walls and adding furniture.</p>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section">
+    <h2 class="section-title">Why Wireframes Matter</h2>
+    <div class="info">
+      <ul>
+        <li>🔍 Clarifies user flow & navigation early.</li>
+        <li>💡 Helps spot usability issues before coding.</li>
+        <li>📉 Reduces development cost by avoiding rework.</li>
+        <li>🤝 Aligns teams (designers, developers, stakeholders).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Types -->
+  <section class="section">
+    <h2 class="section-title">Types of Wireframes</h2>
+    <div class="info">
+      <p><strong>Low-Fidelity:</strong> Sketch-style, focuses on layout and flow.</p>
+      <p><strong>Mid-Fidelity:</strong> Adds spacing, grid alignment, and some text.</p>
+      <p><strong>High-Fidelity:</strong> More detailed, close to final design but still without visuals.</p>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <h2 class="section-title">Our Wireframing Process</h2>
+    <div class="timeline">
+      <div class="timeline-step"><strong>1. Research:</strong> Gather requirements, define user personas, analyze competitors.</div>
+      <div class="timeline-step"><strong>2. User Flows:</strong> Map out journeys users will take across the product.</div>
+      <div class="timeline-step"><strong>3. Sketching:</strong> Quick drafts to visualize screens and interactions.</div>
+      <div class="timeline-step"><strong>4. Wireframing:</strong> Create structured layouts with hierarchy.</div>
+      <div class="timeline-step"><strong>5. Validation:</strong> Share with stakeholders & adjust based on feedback.</div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="section">
+    <h2 class="section-title">Popular Tools</h2>
+    <div class="info">
+      <p>We use industry-leading tools to deliver clear, flexible wireframes:</p>
+      <ul>
+        <li>✏️ Figma</li>
+        <li>🧩 Adobe XD</li>
+        <li>📐 Sketch</li>
+        <li>📝 Balsamiq</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Start Your Wireframe Journey</h2>
+    <p>Turn your vision into structured product layouts that save time and cost during development.</p>
+    <a href="../index.html#contact">🚀 Request Wireframes</a>
+  </section>
+
+  <!-- Back -->
+  <a href="../sevices/ux-ui-design.html" class="back-to-home">⮜ Back</a>
+
+  <script>
+    // THEME TOGGLE
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeBtn.textContent = savedTheme === 'dark' ? '☀' : '☾';
+
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      themeBtn.textContent = next === 'dark' ? '☀' : '☾';
+      localStorage.setItem('theme', next);
+    });
+  </script>
+
+<script src="../script.js" defer></script>
+
+</body>
+</html>

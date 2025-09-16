@@ -81,7 +81,7 @@
 </head>
 <body>
   <!-- THEME TOGGLE -->
-  <button id="themeToggleBtn" class="theme-toggle-btn">☾</button>
+  <button id="themeToggleBtn" class="theme-toggle-btn"><span class="icon">☾</span></button>
 
   <h1 class="reveal">✅ Validation & Testing</h1>
   <p class="reveal" style="max-width:900px;margin:0 auto;">
@@ -142,16 +142,23 @@
   <!-- BACK LINK -->
   <a href="../sevices/product-strategy.html" class="back-to-home">
     <span class="arrow">⮜</span>
-    <span class="text">Back to Services</span>
+    <span class="text">Back</span>
   </a>
 
   <script>
-    // Theme toggle
-    const themeBtn=document.getElementById("themeToggleBtn");
-    themeBtn.addEventListener("click",()=>{
-      const cur=document.documentElement.getAttribute("data-theme");
-      document.documentElement.setAttribute("data-theme",cur==="dark"?"light":"dark");
-      themeBtn.textContent=cur==="dark"?"☾":"☀";
+    // THEME TOGGLE
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const icon = themeBtn.querySelector('.icon');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    icon.textContent = savedTheme === 'dark' ? '☀' : '☾';
+
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      icon.textContent = next === 'dark' ? '☀' : '☾';
+      localStorage.setItem('theme', next);
     });
 
     // Reveal on scroll

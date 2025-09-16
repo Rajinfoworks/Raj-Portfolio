@@ -174,7 +174,7 @@
 
     <!-- BACK LINK -->
     <a href="../sevices/product-strategy.html" class="back-to-home">
-      <span class="arrow">⮜</span> Back to Services
+      <span class="arrow">⮜</span> Back
     </a>
   </div>
   </div>
@@ -182,18 +182,20 @@
   <script>
     (() => {
       const page=document.getElementById('market-research-page');
-      const themeBtn=document.getElementById('themeToggleBtn');
-      const icon=themeBtn.querySelector('.icon');
+      // THEME TOGGLE
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const icon = themeBtn.querySelector('.icon');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    icon.textContent = savedTheme === 'dark' ? '☀' : '☾';
 
-      // Theme toggle
-      const applyTheme=t=>{
-        document.documentElement.setAttribute('data-theme',t);
-        icon.textContent=t==='dark'?'☀':'☾';
-      };
-      themeBtn.addEventListener('click',()=>{
-        const current=document.documentElement.getAttribute('data-theme');
-        applyTheme(current==='dark'?'light':'dark');
-      });
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      icon.textContent = next === 'dark' ? '☀' : '☾';
+      localStorage.setItem('theme', next);
+    });
 
       // Reveal on scroll
       const revealEls=[...page.querySelectorAll('.reveal')];

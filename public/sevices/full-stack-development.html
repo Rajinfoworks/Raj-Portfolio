@@ -1,44 +1,221 @@
-<!-- ===== Full-Stack Development ===== -->
-<section id="full-stack-development" class="section">
-  <div class="container">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full-Stack Development | Rajinfoworks</title>
+<meta name="description" content="Rajinfoworks — Expert Full-Stack Development delivering secure, scalable, and high-performance web solutions with modern technologies.">
+<meta name="author" content="Raj Sharma">
+<meta name="robots" content="index, follow">
 
-    <!-- Section Header -->
-    <div class="section-head">
-      <h2 class="section-title">Full-Stack Development</h2>
-      <p class="section-desc">
-        Building reliable, secure, and high-performance digital solutions from frontend to backend.
-      </p>
-    </div>
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Raj Sharma | Full-Stack Developer">
+<meta property="og:description" content="Building modern, responsive full-stack web applications with clean design, security, and SEO focus.">
+<meta property="og:image" content="https://raj-portfolio-nuu4.onrender.com/images/fullstack-preview.jpg">
+<meta property="og:url" content="https://raj-portfolio-nuu4.onrender.com/full-stack-development.html">
+<meta property="og:site_name" content="Rajinfoworks">
 
-    <!-- Introduction -->
-    <p class="reveal">
-      At <span class="brand-custom">Raj<span class="i-red">i</span>nfoworks</span>, we turn your ideas and designs into fully functional
-      applications. Whether it’s a website, web app, or complex platform, we use modern technologies
-      to ensure scalability, speed, and security.
-    </p>
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- Development Approach -->
-    <h3 class="sub-title reveal">Our Full-Stack Development Process:</h3>
-    <ul class="strength-list reveal">
-      <li>Frontend Development: React, Next.js for responsive, dynamic UI</li>
-      <li>Backend Development: Node.js, REST & GraphQL APIs, secure databases</li>
-      <li>Cloud & Hosting: Deployment, optimization, and performance tuning</li>
-      <li>Integration: Payment gateways, third-party APIs, and cloud services</li>
-      <li>Testing & QA: Automated testing, debugging, and performance monitoring</li>
-      <li>Maintenance & Support: Continuous updates, security patches, and scalability</li>
-    </ul>
+<!-- Favicon -->
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 
-    <!-- Benefits -->
-    <h3 class="sub-title reveal">Why Choose Us for Development?</h3>
-    <p class="reveal">
-      We focus on building applications that are **fast, reliable, and scalable**. Every project is optimized for
-      performance and SEO, ensuring your product not only works perfectly but also reaches its audience efficiently.
-    </p>
+<!-- Styles -->
+<link rel="stylesheet" href="../style.css">
 
-    <!-- CTA -->
-    <div class="cta-group reveal">
-      <a href="#contact" class="btn btn-primary">⚙️ Build My App</a>
-    </div>
+<style>
+/* ===== THEME VARIABLES ===== */
+[data-theme="dark"] {
+  --bg:#12141b; --bg-card:#1e2233; --text:#e1e3e8; --muted:#8a8f9c;
+  --primary:#4fc3f7; --accent:#ffb74d; --shadow:0 25px 60px rgba(0,0,0,0.6);
+  --btn-bg:linear-gradient(135deg,var(--primary),var(--accent)); --btn-text:#12141b;
+  --highlight:rgba(255,183,77,0.2);
+}
+[data-theme="light"] {
+  --bg:#f8f9fb; --bg-card:#ffffff; --text:#1b1b1b; --muted:#555;
+  --primary:#1e88e5; --accent:#fb8c00; --shadow:0 25px 60px rgba(0,0,0,0.15);
+  --btn-bg:linear-gradient(135deg,var(--primary),var(--accent)); --btn-text:#fff;
+  --highlight:rgba(251,140,0,0.2);
+}
 
+/* ===== RESET & BASE ===== */
+*, *::before, *::after{margin:0; padding:0; box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif; background:var(--bg); color:var(--text); line-height:1.65; overflow-x:hidden; transition:0.4s;}
+a{text-decoration:none;color:var(--primary);transition:0.3s;} a:hover{color:var(--accent);}
+h1,h2,h3,h4{margin:0;} p{margin:0 0 1.2em 0;}
+
+/* ===== HERO ===== */
+.hero{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:160px 20px 120px;background:linear-gradient(135deg,rgba(79,195,247,0.1),rgba(255,183,77,0.1));border-radius:20px;margin:20px;}
+.hero h1{font-size:3rem;margin-bottom:20px;color:var(--primary);}
+.hero p{font-size:1.25rem;color:var(--muted);max-width:750px;}
+
+/* ===== SECTIONS ===== */
+.section{padding:80px 20px;max-width:1200px;margin:0 auto;}
+.section-title{font-size:2.5rem;font-weight:700;text-align:center;margin-bottom:40px;position:relative;}
+.section-title::after{content:"";display:block;width:70px;height:4px;background:var(--accent);margin:18px auto 0;border-radius:2px;}
+.section-desc{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 60px;}
+
+/* ===== SERVICE CARDS ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:40px;}
+.card{background:var(--bg-card);border-radius:20px;padding:30px 24px;text-align:center;box-shadow:var(--shadow);transition:0.4s;position:relative;overflow:hidden;color:inherit;text-decoration:none;}
+.card:hover{transform:translateY(-12px) scale(1.03);box-shadow:0 35px 80px var(--highlight);background:linear-gradient(145deg,var(--primary),var(--accent));color:#fff;}
+.card-icon{font-size:2.2rem;color:var(--accent);margin-bottom:16px;transition:0.3s;}
+.card:hover .card-icon{transform:scale(1.3) rotate(10deg);color:#fff;}
+.card h3{font-size:1.45rem;margin-bottom:12px;color:var(--primary);transition:0.3s;}
+.card p{font-size:1rem;color:var(--text);line-height:1.7;transition:0.3s;}
+
+/* ===== PROCESS STEPS ===== */
+.steps{display:flex;flex-direction:column;gap:30px;margin-top:40px;}
+.step{display:flex;gap:20px;align-items:flex-start;}
+.step-icon{font-size:1.6rem;color:var(--accent);flex-shrink:0;}
+.step-content{color:var(--text);font-size:1rem;line-height:1.7;}
+.step-content strong{color:var(--primary);}
+
+/* ===== TECH STACK ===== */
+.stack{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:40px;}
+.stack div{background:var(--bg-card);padding:14px 22px;border-radius:18px;font-weight:600;box-shadow:var(--shadow);transition:0.3s;}
+.stack div:hover{transform:translateY(-6px);box-shadow:0 28px 60px var(--highlight);}
+
+/* ===== CTA ===== */
+.cta-btn{display:block;margin:40px auto 0;padding:18px 42px;font-size:1.1rem;border-radius:32px;background:var(--btn-bg);color:var(--btn-text);font-weight:600;text-align:center;border:none;cursor:pointer;transition:0.3s;text-decoration:none;}
+.cta-btn:hover{transform:scale(1.05);}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle-btn{position:fixed;top:20px;right:20px;z-index:999;background:var(--btn-bg);color:var(--btn-text);border:none;padding:14px 18px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.15);transition:0.4s;}
+.theme-toggle-btn .icon{transition:0.6s;}
+.theme-toggle-btn.toggle .icon{transform:rotate(360deg);}
+
+/* ===== BACK LINK ===== */
+.back-to-home{position:fixed;bottom:30px;left:30px;display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:1.1rem;color:var(--primary);text-decoration:none;z-index:999;cursor:pointer;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){.hero h1{font-size:2.3rem;}.section-title{font-size:2rem;}.card{padding:26px;}}
+</style>
+</head>
+<body>
+
+<!-- THEME TOGGLE -->
+<button id="themeToggleBtn" class="theme-toggle-btn"><span class="icon">☾</span></button>
+
+<!-- HERO -->
+<header class="hero">
+  <h1>Full-Stack Development Services</h1>
+  <p>We deliver end-to-end web solutions that are scalable, secure, and optimized for performance. From modern, responsive frontends to powerful backend systems, we create applications that solve real business problems efficiently.</p>
+</header>
+
+<!-- EXPERTISE -->
+<section class="section" id="services">
+  <h2 class="section-title">Our Expertise</h2>
+  <p class="section-desc">Our full-stack services cover every aspect of web development with a focus on performance, security, and maintainability.</p>
+
+  <div class="cards">
+    <a href="frontend-development.html" class="card">
+      <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+      <h3>Frontend Development</h3>
+      <p>Modern, interactive interfaces using React, Next.js, and responsive design principles for seamless cross-device experiences.</p>
+    </a>
+
+    <a href="backend-development.html" class="card">
+      <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+      <h3>Backend Development</h3>
+      <p>Secure and scalable server logic, REST APIs, and database management using Node.js, Express, MongoDB, and PostgreSQL.</p>
+    </a>
+
+    <a href="cloud-integration.html" class="card">
+      <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
+      <h3>Cloud & DevOps</h3>
+      <p>Deploy applications on AWS, Azure, or GCP with CI/CD, containerization, and serverless solutions for reliability and scalability.</p>
+    </a>
+
+    <a href="security-authentication.html" class="card">
+      <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
+      <h3>Security & Authentication</h3>
+      <p>Implementing robust security practices including OAuth, JWT, SSL/TLS, and compliance with data protection standards.</p>
+    </a>
+
+    <a href="performance-optimization.html" class="card">
+      <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+      <h3>Performance Optimization</h3>
+      <p>Maximizing efficiency with code optimization, caching strategies, asset minification, and responsive loading techniques.</p>
+    </a>
+
+    <a href="seo-analytics.html" class="card">
+      <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+      <h3>SEO & Analytics</h3>
+      <p>Improving visibility and insights using SEO best practices, Google Analytics, and actionable data to drive growth.</p>
+    </a>
   </div>
 </section>
+
+<!-- TECH STACK -->
+<section class="section" id="tech">
+  <h2 class="section-title">Technology Stack</h2>
+  <div class="stack">
+    <div>React</div>
+    <div>Next.js</div>
+    <div>Node.js</div>
+    <div>Express.js</div>
+    <div>MongoDB</div>
+    <div>PostgreSQL</div>
+    <div>Docker</div>
+    <div>AWS</div>
+    <div>Firebase</div>
+    <div>TypeScript</div>
+    <div>GraphQL</div>
+  </div>
+</section>
+
+<!-- DEVELOPMENT PROCESS -->
+<section class="section" id="process">
+  <h2 class="section-title">Development Process</h2>
+  <div class="steps" id="timeline"></div>
+</section>
+
+<!-- CTA -->
+<section class="section" id="contact">
+  <h2 class="section-title">Start Your Full-Stack Project</h2>
+  <p class="section-desc">Let's create a scalable, secure, and high-performance web application that accelerates your business growth.</p>
+  <a href="../index.html#contact" class="cta-btn">📩 Request Full-Stack Development</a>
+</section>
+
+<!-- BACK LINK -->
+<a href="../index.html#services" class="back-to-home">⮜ Back to Services</a>
+
+<script>
+// THEME TOGGLE
+const themeBtn=document.getElementById('themeToggleBtn');
+const icon=themeBtn.querySelector('.icon');
+const savedTheme=localStorage.getItem('theme')||'dark';
+document.documentElement.setAttribute('data-theme',savedTheme);
+icon.textContent=savedTheme==='dark'?'☀':'☾';
+themeBtn.addEventListener('click',()=>{
+  const current=document.documentElement.getAttribute('data-theme');
+  const next=current==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',next);
+  icon.textContent=next==='dark'?'☀':'☾';
+  localStorage.setItem('theme',next);
+});
+
+// Development Timeline
+const timelineData=[
+  {title:"Idea & Planning", desc:"Understanding vision, goals, and requirements."},
+  {title:"Design & Prototyping", desc:"Wireframes, mockups, and interactive prototypes."},
+  {title:"Full-Stack Development", desc:"Frontend, backend, database, and APIs implementation."},
+  {title:"Testing & QA", desc:"Performance, security, and functionality testing."},
+  {title:"Deployment", desc:"Production launch with CI/CD pipelines."},
+  {title:"Maintenance & Support", desc:"Ongoing updates, monitoring, and enhancements."}
+];
+const timeline=document.getElementById('timeline');
+timelineData.forEach(t=>{
+  const div=document.createElement('div'); div.classList.add('step');
+  div.innerHTML=`<div class="step-icon">⚡</div><div class="step-content"><strong>${t.title}:</strong> ${t.desc}</div>`;
+  timeline.appendChild(div);
+});
+</script>
+</body>
+</html>

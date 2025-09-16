@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backend Development | Rajinfoworks</title>
+<meta name="description" content="Professional Backend Development services using Node.js, Express, MongoDB, and PostgreSQL for scalable, secure, and high-performance server-side applications.">
+<meta name="author" content="Raj Sharma">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Raj Sharma | Backend Developer">
+<meta property="og:description" content="Building robust, secure, and high-performance backend systems using modern server-side technologies.">
+<meta property="og:image" content="https://raj-portfolio-nuu4.onrender.com/images/backend-preview.jpg">
+<meta property="og:url" content="https://raj-portfolio-nuu4.onrender.com/backend-development.html">
+<meta property="og:site_name" content="Rajinfoworks">
+
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- Favicon & Styles -->
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../style.css">
+
+
+<style>
+/* THEME VARIABLES */
+[data-theme="dark"] { --bg:#12141b; --bg-card:#1e2233; --text:#e1e3e8; --muted:#8a8f9c; --primary:#4fc3f7; --accent:#ffb74d; --shadow:0 25px 60px rgba(0,0,0,0.6); --btn-bg:linear-gradient(135deg,var(--primary),var(--accent)); --btn-text:#12141b; --highlight:rgba(255,183,77,0.2);}
+[data-theme="light"] { --bg:#f8f9fb; --bg-card:#ffffff; --text:#1b1b1b; --muted:#555; --primary:#1e88e5; --accent:#fb8c00; --shadow:0 25px 60px rgba(0,0,0,0.15); --btn-bg:linear-gradient(135deg,var(--primary),var(--accent)); --btn-text:#fff; --highlight:rgba(251,140,0,0.2);}
+
+/* RESET & BASE */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body { font-family:'Poppins', sans-serif; background:var(--bg); color:var(--text); line-height:1.65; overflow-x:hidden; transition: background 0.4s,color 0.4s;}
+a { text-decoration:none; color:var(--primary); transition:color 0.3s; }
+a:hover { color:var(--accent); }
+h1,h2,h3,h4 { margin:0; }
+p { margin:0 0 1.2em 0; }
+
+/* HERO */
+.hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:160px 20px 120px; background: linear-gradient(135deg, rgba(79,195,247,0.1), rgba(255,183,77,0.1)); border-radius:20px; margin:20px;}
+.hero h1 { font-size:3rem; margin-bottom:20px; color:var(--primary);}
+.hero p { font-size:1.25rem; color:var(--muted); max-width:720px; }
+
+/* SECTIONS */
+.section { padding:80px 20px; max-width:1200px; margin:0 auto; }
+.section-title { font-size:2.5rem; font-weight:700; text-align:center; margin-bottom:40px; position:relative;}
+.section-title::after { content:""; display:block; width:70px; height:4px; background:var(--accent); margin:18px auto 0; border-radius:2px; }
+.section-desc { text-align:center; color:var(--muted); max-width:700px; margin:0 auto 60px; }
+
+/* CONTENT BLOCKS */
+.content-block { margin-bottom:50px; }
+.content-block h3 { font-size:1.6rem; margin-bottom:16px; color:var(--primary);}
+.content-block p { font-size:1rem; color:var(--text); line-height:1.8; margin-bottom:16px;}
+.highlight { color:var(--accent); font-weight:600; }
+
+/* TECH STACK */
+.stack { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:40px;}
+.stack div { background:var(--bg-card); padding:14px 22px; border-radius:18px; font-weight:600; box-shadow:var(--shadow); transition:.3s;}
+.stack div:hover { transform:translateY(-6px); box-shadow:0 28px 60px var(--highlight); }
+
+/* DEVELOPMENT PROCESS */
+.steps { display:flex; flex-direction:column; gap:30px; margin-top:40px;}
+.step { display:flex; gap:20px; align-items:flex-start;}
+.step-icon { font-size:1.6rem; color:var(--accent); flex-shrink:0;}
+.step-content { color:var(--text); font-size:1rem; line-height:1.7;}
+.step-content strong { color:var(--primary); }
+
+/* CTA */
+.cta-btn { display:block; margin:40px auto 0; padding:18px 42px; font-size:1.1rem; border-radius:32px; background:var(--btn-bg); color:var(--btn-text); font-weight:600; text-align:center; border:none; cursor:pointer; transition: all 0.3s; text-decoration:none;}
+.cta-btn:hover { transform:scale(1.05); }
+
+/* THEME TOGGLE */
+.theme-toggle-btn { position:fixed; top:20px; right:20px; z-index:999; background:var(--btn-bg); color:var(--btn-text); border:none; padding:14px 18px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease, background 0.4s ease, color 0.4s ease;}
+.theme-toggle-btn .icon { transition: transform 0.6s ease, color 0.4s; }
+.theme-toggle-btn.toggle .icon { transform: rotate(360deg); }
+
+/* BACK LINK */
+.back-to-home { position:fixed; bottom:30px; left:30px; display:inline-flex; align-items:center; gap:10px; font-weight:600; font-size:1.1rem; color:var(--primary); text-decoration:none; z-index:999; cursor:pointer; }
+
+/* RESPONSIVE */
+@media(max-width:768px){ .hero h1{font-size:2.3rem;} .section-title{font-size:2rem;} }
+</style>
+
+</head>
+<body>
+
+<!-- THEME TOGGLE -->
+<button id="themeToggleBtn" class="theme-toggle-btn"><span class="icon">☾</span></button>
+
+<!-- HERO -->
+<header class="hero">
+  <h1>Backend Development Services</h1>
+  <p>Building secure, scalable, and high-performance server-side applications using Node.js, Express, and modern database technologies.</p>
+</header>
+
+<!-- ABOUT BACKEND -->
+<section class="section">
+  <h2 class="section-title">Why Backend Matters</h2>
+  <p class="section-desc">Your backend powers the application logic, manages data, and ensures security, scalability, and performance for users.</p>
+
+  <div class="content-block">
+    <h3>Server-Side Logic</h3>
+    <p>We implement robust business logic using <span class="highlight">Node.js</span> and <span class="highlight">Express.js</span> to handle complex operations efficiently.</p>
+  </div>
+
+  <div class="content-block">
+    <h3>Database Management</h3>
+    <p>Designing secure and scalable databases with <span class="highlight">MongoDB</span> and <span class="highlight">PostgreSQL</span> for optimized data storage and retrieval.</p>
+  </div>
+
+  <div class="content-block">
+    <h3>API Development</h3>
+    <p>Creating RESTful and GraphQL APIs for seamless communication between frontend and backend systems.</p>
+  </div>
+
+  <div class="content-block">
+    <h3>Security & Authentication</h3>
+    <p>Implementing <span class="highlight">JWT</span>, OAuth, and SSL/TLS to secure sensitive user data and backend processes.</p>
+  </div>
+
+  <div class="content-block">
+    <h3>Performance Optimization</h3>
+    <p>Optimizing server performance with caching, indexing, and scalable architectures to ensure minimal response times.</p>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="section">
+  <h2 class="section-title">Tech Stack</h2>
+  <div class="stack">
+    <div>Node.js</div>
+    <div>Express.js</div>
+    <div>MongoDB</div>
+    <div>PostgreSQL</div>
+    <div>GraphQL</div>
+    <div>REST APIs</div>
+    <div>Docker</div>
+    <div>Redis</div>
+  </div>
+</section>
+
+<!-- DEVELOPMENT PROCESS -->
+<section class="section">
+  <h2 class="section-title">Our Backend Process</h2>
+  <div class="steps">
+    <div class="step"><div class="step-icon">⚡</div><div class="step-content"><strong>1. Discovery:</strong> Understanding your business logic, data flow, and performance needs.</div></div>
+    <div class="step"><div class="step-icon">⚡</div><div class="step-content"><strong>2. Architecture Design:</strong> Planning scalable server architecture and database schemas.</div></div>
+    <div class="step"><div class="step-icon">⚡</div><div class="step-content"><strong>3. Development:</strong> Building APIs, server logic, and database integration.</div></div>
+    <div class="step"><div class="step-icon">⚡</div><div class="step-content"><strong>4. Testing:</strong> Unit, integration, and load testing to ensure reliability.</div></div>
+    <div class="step"><div class="step-icon">⚡</div><div class="step-content"><strong>5. Deployment:</strong> Deploying backend services with optimized configurations and CI/CD pipelines.</div></div>
+    <div class="step"><div class="step-icon">⚡</div><div class="step-content"><strong>6. Maintenance:</strong> Continuous monitoring, bug fixes, and performance tuning.</div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <a href="../index.html#contact" class="cta-btn">📩 Start Your Backend Project</a>
+</section>
+
+<!-- BACK LINK -->
+<a href="../sevices/full-stack-development.html" class="back-to-home">⮜ Back to Services</a>
+
+<script>
+// THEME TOGGLE
+const themeBtn=document.getElementById('themeToggleBtn');
+const icon=themeBtn.querySelector('.icon');
+const savedTheme=localStorage.getItem('theme')||'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+icon.textContent=savedTheme==='dark'?'☀':'☾';
+themeBtn.addEventListener('click',()=>{
+  const current=document.documentElement.getAttribute('data-theme');
+  const next=current==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',next);
+  icon.textContent=next==='dark'?'☀':'☾';
+  localStorage.setItem('theme',next);
+});
+</script>
+
+</body>
+</html>

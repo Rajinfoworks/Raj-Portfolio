@@ -1,221 +1,368 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Full-Stack Development | Rajinfoworks</title>
-<meta name="description" content="Rajinfoworks — Expert Full-Stack Development delivering secure, scalable, and high-performance web solutions with modern technologies.">
-<meta name="author" content="Raj Sharma">
-<meta name="robots" content="index, follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Raj Sharma | Full-Stack Developer">
-<meta property="og:description" content="Building modern, responsive full-stack web applications with clean design, security, and SEO focus.">
-<meta property="og:image" content="https://raj-portfolio-nuu4.onrender.com/images/fullstack-preview.jpg">
-<meta property="og:url" content="https://raj-portfolio-nuu4.onrender.com/full-stack-development.html">
-<meta property="og:site_name" content="Rajinfoworks">
+  <title>Full-Stack Development Services | Rajinfoworks</title>
+  <meta name="description" content="Expert full-stack development services by Rajinfoworks, specializing in creating secure, scalable, and high-performance web applications using modern technologies like React, Next.js, and Node.js.">
+  <meta name="author" content="Raj Sharma">
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="en" />
+  <meta name="color-scheme" content="dark light">
 
-<!-- Fonts & Icons -->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Full-Stack Development Services | Rajinfoworks" />
+  <meta property="og:description"
+    content="Building modern, secure, and high-performance web applications using React, Next.js, Node.js, and cloud technologies." />
+  <meta property="og:image" content="https://raj-portfolio-nuu4.onrender.com/images/fullstack-preview.webp" />
+  <meta property="og:url" content="https://raj-portfolio-nuu4.onrender.com/services/full-stack-development.html" />
+  <meta property="og:site_name" content="Rajinfoworks" />
 
-<!-- Favicon -->
-<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Full-Stack Development Services | Rajinfoworks" />
+  <meta name="twitter:description"
+    content="Expert Full-Stack Development services by Rajinfoworks — modern, secure, and scalable web applications." />
+  <meta name="twitter:image" content="https://raj-portfolio-nuu4.onrender.com/images/fullstack-preview.webp" />
 
-<!-- Styles -->
-<link rel="stylesheet" href="../style.css">
+  <link rel="canonical" href="https://raj-portfolio-nuu4.onrender.com/services/full-stack-development.html" />
 
-<style>
-/* ===== THEME VARIABLES ===== */
-[data-theme="dark"] {
-  --bg:#12141b; --bg-card:#1e2233; --text:#e1e3e8; --muted:#8a8f9c;
-  --primary:#4fc3f7; --accent:#ffb74d; --shadow:0 25px 60px rgba(0,0,0,0.6);
-  --btn-bg:linear-gradient(135deg,var(--primary),var(--accent)); --btn-text:#12141b;
-  --highlight:rgba(255,183,77,0.2);
-}
-[data-theme="light"] {
-  --bg:#f8f9fb; --bg-card:#ffffff; --text:#1b1b1b; --muted:#555;
-  --primary:#1e88e5; --accent:#fb8c00; --shadow:0 25px 60px rgba(0,0,0,0.15);
-  --btn-bg:linear-gradient(135deg,var(--primary),var(--accent)); --btn-text:#fff;
-  --highlight:rgba(251,140,0,0.2);
-}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Full-Stack Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rajinfoworks",
+      "url": "https://raj-portfolio-nuu4.onrender.com/",
+      "logo": "https://raj-portfolio-nuu4.onrender.com/images/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/rajinfoworks",
+        "https://github.com/Rajinfoworks"
+      ]
+    },
+    "description": "Comprehensive Full-Stack Development services including frontend, backend, database, cloud deployment, and performance optimization.",
+    "areaServed": "Global"
+  }
+  </script>
 
-/* ===== RESET & BASE ===== */
-*, *::before, *::after{margin:0; padding:0; box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Poppins',sans-serif; background:var(--bg); color:var(--text); line-height:1.65; overflow-x:hidden; transition:0.4s;}
-a{text-decoration:none;color:var(--primary);transition:0.3s;} a:hover{color:var(--accent);}
-h1,h2,h3,h4{margin:0;} p{margin:0 0 1.2em 0;}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-/* ===== HERO ===== */
-.hero{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:160px 20px 120px;background:linear-gradient(135deg,rgba(79,195,247,0.1),rgba(255,183,77,0.1));border-radius:20px;margin:20px;}
-.hero h1{font-size:3rem;margin-bottom:20px;color:var(--primary);}
-.hero p{font-size:1.25rem;color:var(--muted);max-width:750px;}
+  <link rel="stylesheet" href="../style.css" />
 
-/* ===== SECTIONS ===== */
-.section{padding:80px 20px;max-width:1200px;margin:0 auto;}
-.section-title{font-size:2.5rem;font-weight:700;text-align:center;margin-bottom:40px;position:relative;}
-.section-title::after{content:"";display:block;width:70px;height:4px;background:var(--accent);margin:18px auto 0;border-radius:2px;}
-.section-desc{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 60px;}
-
-/* ===== SERVICE CARDS ===== */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:40px;}
-.card{background:var(--bg-card);border-radius:20px;padding:30px 24px;text-align:center;box-shadow:var(--shadow);transition:0.4s;position:relative;overflow:hidden;color:inherit;text-decoration:none;}
-.card:hover{transform:translateY(-12px) scale(1.03);box-shadow:0 35px 80px var(--highlight);background:linear-gradient(145deg,var(--primary),var(--accent));color:#fff;}
-.card-icon{font-size:2.2rem;color:var(--accent);margin-bottom:16px;transition:0.3s;}
-.card:hover .card-icon{transform:scale(1.3) rotate(10deg);color:#fff;}
-.card h3{font-size:1.45rem;margin-bottom:12px;color:var(--primary);transition:0.3s;}
-.card p{font-size:1rem;color:var(--text);line-height:1.7;transition:0.3s;}
-
-/* ===== PROCESS STEPS ===== */
-.steps{display:flex;flex-direction:column;gap:30px;margin-top:40px;}
-.step{display:flex;gap:20px;align-items:flex-start;}
-.step-icon{font-size:1.6rem;color:var(--accent);flex-shrink:0;}
-.step-content{color:var(--text);font-size:1rem;line-height:1.7;}
-.step-content strong{color:var(--primary);}
-
-/* ===== TECH STACK ===== */
-.stack{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:40px;}
-.stack div{background:var(--bg-card);padding:14px 22px;border-radius:18px;font-weight:600;box-shadow:var(--shadow);transition:0.3s;}
-.stack div:hover{transform:translateY(-6px);box-shadow:0 28px 60px var(--highlight);}
-
-/* ===== CTA ===== */
-.cta-btn{display:block;margin:40px auto 0;padding:18px 42px;font-size:1.1rem;border-radius:32px;background:var(--btn-bg);color:var(--btn-text);font-weight:600;text-align:center;border:none;cursor:pointer;transition:0.3s;text-decoration:none;}
-.cta-btn:hover{transform:scale(1.05);}
-
-/* ===== THEME TOGGLE ===== */
-.theme-toggle-btn{position:fixed;top:20px;right:20px;z-index:999;background:var(--btn-bg);color:var(--btn-text);border:none;padding:14px 18px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.15);transition:0.4s;}
-.theme-toggle-btn .icon{transition:0.6s;}
-.theme-toggle-btn.toggle .icon{transform:rotate(360deg);}
-
-/* ===== BACK LINK ===== */
-.back-to-home{position:fixed;bottom:30px;left:30px;display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:1.1rem;color:var(--primary);text-decoration:none;z-index:999;cursor:pointer;}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){.hero h1{font-size:2.3rem;}.section-title{font-size:2rem;}.card{padding:26px;}}
-</style>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
 </head>
+
 <body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Raj Sharma Home">
+        <span class="brand-custom">Raj<span class="i-red">i</span>nfoworks</span>
+      </a>
 
-<!-- THEME TOGGLE -->
-<button id="themeToggleBtn" class="theme-toggle-btn"><span class="icon">☾</span></button>
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
 
-<!-- HERO -->
-<header class="hero">
-  <h1>Full-Stack Development Services</h1>
-  <p>We deliver end-to-end web solutions that are scalable, secure, and optimized for performance. From modern, responsive frontends to powerful backend systems, we create applications that solve real business problems efficiently.</p>
-</header>
+      <nav id="primary-nav" class="nav-links" aria-label="Primary Navigation">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#clients">Clients</a>
+        <a href="../index.html#testimonials">Testimonials</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☾</button>
+        <button class="resume-btn" onclick="window.open('../images/Raj_Sharma_Resume.pdf?v=2','_blank')"
+          aria-label="Download Resume">📄 Resume</button>
+      </nav>
+    </div>
+  </header>
 
-<!-- EXPERTISE -->
-<section class="section" id="services">
-  <h2 class="section-title">Our Expertise</h2>
-  <p class="section-desc">Our full-stack services cover every aspect of web development with a focus on performance, security, and maintainability.</p>
+  <main>
+    <section id="fullstack-hero" class="hero section">
+      <div class="container hero-inner">
+        <div class="intro">
+          <h2 class="greeting">💻 Full-Stack Development</h2>
+          <p class="tagline">Creating secure, scalable, and high-performance web applications from frontend to backend.</p>
+        </div>
+        <div class="badge">Available for Projects</div>
+        <h1 class="headline">
+          Building <span class="gradient-text">modern & robust</span> web solutions
+        </h1>
+        <p class="subhead">End-to-end development with React, Next.js, Node.js, cloud integration, performance optimization, and SEO-ready implementations.</p>
+        <div class="cta-group">
+          <a href="#services-details" class="btn btn-primary">View Services</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+    </section>
 
-  <div class="cards">
-    <a href="frontend-development.html" class="card">
-      <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-      <h3>Frontend Development</h3>
-      <p>Modern, interactive interfaces using React, Next.js, and responsive design principles for seamless cross-device experiences.</p>
-    </a>
+    <section id="services-details" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Full-Stack Services</h2>
+          <p class="section-desc">Comprehensive web development services for startups and enterprises.</p>
+        </div>
+        <div class="grid cards-3">
+          <a href="frontend-development.html" class="card card--service reveal" aria-label="Learn more about Frontend Development">
+            <div class="card-icon">🖥️</div>
+            <h3>Frontend Development</h3>
+            <p>Responsive, interactive interfaces using React, Next.js, and modern design principles.</p>
+          </a>
+          <a href="backend-development.html" class="card card--service reveal" aria-label="Learn more about Backend Development">
+            <div class="card-icon">🗄️</div>
+            <h3>Backend Development</h3>
+            <p>Secure and scalable APIs, server-side logic, and database management with Node.js, Express, and MongoDB/PostgreSQL.</p>
+          </a>
+          <a href="cloud-integration.html" class="card card--service reveal" aria-label="Learn more about Cloud & DevOps">
+            <div class="card-icon">☁️</div>
+            <h3>Cloud & DevOps</h3>
+            <p>Deployment, CI/CD pipelines, containerization, and serverless solutions on AWS, GCP, or Azure.</p>
+          </a>
+          <a href="security-authentication.html" class="card card--service reveal" aria-label="Learn more about Security & Authentication">
+            <div class="card-icon">🔒</div>
+            <h3>Security & Authentication</h3>
+            <p>OAuth, JWT, SSL/TLS, and data compliance to secure your applications.</p>
+          </a>
+          <a href="performance-optimization.html" class="card card--service reveal" aria-label="Learn more about Performance Optimization">
+            <div class="card-icon">🚀</div>
+            <h3>Performance Optimization</h3>
+            <p>Faster load times, caching, code optimization, and responsive performance for all devices.</p>
+          </a>
+          <a href="seo-analytics.html" class="card card--service reveal" aria-label="Learn more about SEO & Analytics">
+            <div class="card-icon">📊</div>
+            <h3>SEO & Analytics</h3>
+            <p>Optimize visibility, track performance, and improve growth with SEO and Google Analytics.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <a href="backend-development.html" class="card">
-      <div class="card-icon"><i class="fa-solid fa-database"></i></div>
-      <h3>Backend Development</h3>
-      <p>Secure and scalable server logic, REST APIs, and database management using Node.js, Express, MongoDB, and PostgreSQL.</p>
-    </a>
+    <section id="fullstack-process" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Development Process</h2>
+          <p class="section-desc">Structured approach for delivering scalable, secure, and high-performance web applications.</p>
+        </div>
+        <div class="grid cards-4">
+          <div class="card reveal">
+            <div class="card-icon">💡</div>
+            <h3>Planning & Requirement</h3>
+            <p>Understanding vision, business goals, and functional requirements for your web application.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">🖌️</div>
+            <h3>Design & Prototyping</h3>
+            <p>Wireframes, mockups, and interactive prototypes ensuring seamless user experience.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">⚙️</div>
+            <h3>Full-Stack Development</h3>
+            <p>Frontend, backend, database, API integration, and cloud deployment for end-to-end functionality.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">✅</div>
+            <h3>Testing & Deployment</h3>
+            <p>Quality assurance, performance, security checks, CI/CD pipelines, and production launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <a href="cloud-integration.html" class="card">
-      <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
-      <h3>Cloud & DevOps</h3>
-      <p>Deploy applications on AWS, Azure, or GCP with CI/CD, containerization, and serverless solutions for reliability and scalability.</p>
-    </a>
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-desc">Depth where it counts, breadth where it helps.</p>
+        </header>
 
-    <a href="security-authentication.html" class="card">
-      <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
-      <h3>Security & Authentication</h3>
-      <p>Implementing robust security practices including OAuth, JWT, SSL/TLS, and compliance with data protection standards.</p>
-    </a>
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-top">
+              <span>UI/UX Design</span>
+              <span class="skill-val">90%</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--target:90%"></span>
+            </div>
+          </div>
 
-    <a href="performance-optimization.html" class="card">
-      <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
-      <h3>Performance Optimization</h3>
-      <p>Maximizing efficiency with code optimization, caching strategies, asset minification, and responsive loading techniques.</p>
-    </a>
+          <div class="skill">
+            <div class="skill-top">
+              <span>Frontend Development</span>
+              <span class="skill-val">85%</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--target:85%"></span>
+            </div>
+          </div>
 
-    <a href="seo-analytics.html" class="card">
-      <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-      <h3>SEO & Analytics</h3>
-      <p>Improving visibility and insights using SEO best practices, Google Analytics, and actionable data to drive growth.</p>
-    </a>
-  </div>
-</section>
+          <div class="skill">
+            <div class="skill-top">
+              <span>Backend Development</span>
+              <span class="skill-val">80%</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-fill" style="--target:80%"></span>
+            </div>
+          </div>
+        </div>
 
-<!-- TECH STACK -->
-<section class="section" id="tech">
-  <h2 class="section-title">Technology Stack</h2>
-  <div class="stack">
-    <div>React</div>
-    <div>Next.js</div>
-    <div>Node.js</div>
-    <div>Express.js</div>
-    <div>MongoDB</div>
-    <div>PostgreSQL</div>
-    <div>Docker</div>
-    <div>AWS</div>
-    <div>Firebase</div>
-    <div>TypeScript</div>
-    <div>GraphQL</div>
-  </div>
-</section>
+        <div class="skills-marquee">
+          <div class="skills-track">
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo"><span>HTML5</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo"><span>CSS3</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo"><span>JavaScript</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo"><span>React</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js logo"><span>Next.js</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS logo"><span>Tailwind</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js logo"><span>Node.js</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express logo"><span>Express</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo"><span>Python</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL logo"><span>MySQL</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB logo"><span>MongoDB</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel logo"><span>Vercel</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/render.svg" alt="Render logo"><span>Render</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" alt="Netlify logo"><span>Netlify</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" alt="Heroku logo"><span>Heroku</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://www.vectorlogo.zone/logos/google_analytics/google_analytics-icon.svg" alt="Google Analytics logo"><span>Analytics</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma logo"><span>Figma</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo"><span>GitHub</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" alt="Canva logo"><span>Canva</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT logo"><span>ChatGPT</span>
+            </div>
 
-<!-- DEVELOPMENT PROCESS -->
-<section class="section" id="process">
-  <h2 class="section-title">Development Process</h2>
-  <div class="steps" id="timeline"></div>
-</section>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo"><span>HTML5</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo"><span>CSS3</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo"><span>JavaScript</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo"><span>React</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js logo"><span>Next.js</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS logo"><span>Tailwind</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js logo"><span>Node.js</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express logo"><span>Express</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo"><span>Python</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL logo"><span>MySQL</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB logo"><span>MongoDB</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel logo"><span>Vercel</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/render.svg" alt="Render logo"><span>Render</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" alt="Netlify logo"><span>Netlify</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" alt="Heroku logo"><span>Heroku</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://www.vectorlogo.zone/logos/google_analytics/google_analytics-icon.svg" alt="Google Analytics logo"><span>Analytics</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma logo"><span>Figma</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo"><span>GitHub</span>
+            </div>
+            <div class="skill-card"><img loading="lazy" src="https://static.cdnlogo.com/logos/c/41/canva.svg" alt="Canva logo"><span>Canva</span></div>
+            <div class="skill-card"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT logo"><span>ChatGPT</span>
+            </div>
+          </div>
+        </div>
 
-<!-- CTA -->
-<section class="section" id="contact">
-  <h2 class="section-title">Start Your Full-Stack Project</h2>
-  <p class="section-desc">Let's create a scalable, secure, and high-performance web application that accelerates your business growth.</p>
-  <a href="../index.html#contact" class="cta-btn">📩 Request Full-Stack Development</a>
-</section>
+      </div>
+    </section>
 
-<!-- BACK LINK -->
-<a href="../index.html#services" class="back-to-home">⮜ Back to Services</a>
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Start Your Full-Stack Project</h2>
+          <p class="section-desc">Let's build a scalable, secure, and high-performance web application together.</p>
+        </div>
+        <form class="contact grid" action="/send-mail" method="POST" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@domain.com" required autocomplete="email" />
+          </div>
+          <div class="field span-2">
+            <label for="message">Project brief</label>
+            <textarea id="message" name="message" rows="5" placeholder="What are we building?" required></textarea>
+          </div>
+          <div class="field span-2">
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
 
-<script>
-// THEME TOGGLE
-const themeBtn=document.getElementById('themeToggleBtn');
-const icon=themeBtn.querySelector('.icon');
-const savedTheme=localStorage.getItem('theme')||'dark';
-document.documentElement.setAttribute('data-theme',savedTheme);
-icon.textContent=savedTheme==='dark'?'☀':'☾';
-themeBtn.addEventListener('click',()=>{
-  const current=document.documentElement.getAttribute('data-theme');
-  const next=current==='dark'?'light':'dark';
-  document.documentElement.setAttribute('data-theme',next);
-  icon.textContent=next==='dark'?'☀':'☾';
-  localStorage.setItem('theme',next);
-});
+    <!-- ===== Back Button ===== -->
+<div class="back-btn-wrapper">
+  <a href="../index.html#services" class="back-to-home">
+    <span class="back-icon">⮜</span> Back to Services
+  </a>
+</div>
 
-// Development Timeline
-const timelineData=[
-  {title:"Idea & Planning", desc:"Understanding vision, goals, and requirements."},
-  {title:"Design & Prototyping", desc:"Wireframes, mockups, and interactive prototypes."},
-  {title:"Full-Stack Development", desc:"Frontend, backend, database, and APIs implementation."},
-  {title:"Testing & QA", desc:"Performance, security, and functionality testing."},
-  {title:"Deployment", desc:"Production launch with CI/CD pipelines."},
-  {title:"Maintenance & Support", desc:"Ongoing updates, monitoring, and enhancements."}
-];
-const timeline=document.getElementById('timeline');
-timelineData.forEach(t=>{
-  const div=document.createElement('div'); div.classList.add('step');
-  div.innerHTML=`<div class="step-icon">⚡</div><div class="step-content"><strong>${t.title}:</strong> ${t.desc}</div>`;
-  timeline.appendChild(div);
-});
-</script>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> <span class="brand-custom">Raj<span class="i-red">i</span>nfoworks</span>. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/raj-sharma-4a9893268" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile link">
+          <img loading="lazy" src="../images/linkedin_icon.png" alt="LinkedIn logo" class="social-icon" />
+        </a>
+        <a href="mailto:rajinfoworks@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Send an email to Rajinfoworks">
+          <img loading="lazy" src="../images/mailbox_icon.png" alt="Email icon" class="social-icon" />
+        </a>
+        <a href="https://www.instagram.com/rajinfoworks/?__pwa=1" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile link">
+          <img loading="lazy" src="../images/instagram_icon.png" alt="Instagram logo" class="social-icon" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+  <script>
+    // Dynamic Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    
+  </script>
 </body>
+
 </html>

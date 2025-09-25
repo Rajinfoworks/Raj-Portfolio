@@ -138,3 +138,26 @@ if (form) {
     }
   });
 }
+// ===== To make this effect follow the mouse, you need a tiny bit of JS.
+
+document.querySelectorAll('.card-spotlight').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--x', e.clientX - rect.left + 'px');
+      card.style.setProperty('--y', e.clientY - rect.top + 'px');
+    });
+  });
+
+
+  /// ===== Back-to-Top Button =====
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if(scrollTopBtn) scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+if(scrollTopBtn) {
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}

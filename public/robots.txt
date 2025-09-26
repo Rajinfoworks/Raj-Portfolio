@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Disallow:
 
 Sitemap: https://raj-portfolio-f7xn.onrender.com/sitemap.xml
